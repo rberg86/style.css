@@ -1,0 +1,32 @@
+﻿/* ADVANCE A PRACTICE - TOTAL BRAND REFINEMENT 2026 */
+body {
+    font-family: 'Inter', -apple-system, system-ui, sans-serif;
+    color: #1e293b;
+    line-height: 1.8;
+    background-color: #f8fafc;
+}
+.wp-block-cover h1 {
+    font-size: clamp(2.2rem, 5vw, 4rem) !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.03em !important;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+.wp-block-column {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 2.5rem !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+.wp-block-column:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: #00d4ff;
+}
+.wp-block-button__link {
+    background: linear-gradient(135deg, #0f172a 0%, #334155 100%) !important;
+    padding: 1rem 2.5rem !important;
+    border-radius: 6px !important;
+    font-weight: 700 !important;
+}
