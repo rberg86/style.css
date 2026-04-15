@@ -1,10 +1,3 @@
-/*
-Theme Name: Advance A Practice Pro
-Author: rberg86
-Version: 3.1
-Description: AAP Premium Overlay — non-destructive enhancement layer targeting the aap-* class namespace used by the aap-hotfix plugin. Applied site-wide via per-page <style> injection (see WP REST API deploy script). This file is retained in the repo for reference and for the inactive advance-a-practice-pro theme slot.
-*/
-
 /* ============================================================
    AAP PREMIUM OVERLAY v1.0
    Non-destructive enhancement layer for advanceapractice.com.
@@ -15,7 +8,7 @@ Description: AAP Premium Overlay — non-destructive enhancement layer targeting
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap');
 
-/* â”€â”€ Tokens layered on top of existing palette â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Tokens layered on top of existing palette ───────────── */
 :root {
     --aapx-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI Variable', 'Segoe UI', system-ui, sans-serif;
     --aapx-font-display: 'Fraunces', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
@@ -27,7 +20,7 @@ Description: AAP Premium Overlay — non-destructive enhancement layer targeting
     --aapx-shadow-gold: 0 18px 40px rgba(184, 149, 63, 0.28), 0 0 0 1px rgba(201, 169, 97, 0.18);
 }
 
-/* â”€â”€ Global font swap â€” Inter everywhere â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Global font swap — Inter everywhere ─────────────────── */
 html, body, .aap-live-shell, .aap-hotfix,
 .aap-live-shell *, .aap-hotfix * {
     font-family: var(--aapx-font-sans) !important;
@@ -39,7 +32,7 @@ body, .aap-live-shell {
     text-rendering: optimizeLegibility;
 }
 
-/* â”€â”€ Editorial serif for headlines, quotes, and stats â”€â”€â”€â”€â”€â”€ */
+/* ── Editorial serif for headlines, quotes, and stats ────── */
 .aap-live-shell h1,
 .aap-live-shell h2,
 .aap-live-shell .aap-home-lead-copy h1,
@@ -73,7 +66,7 @@ body, .aap-live-shell {
     font-variation-settings: "SOFT" 50, "WONK" 1;
 }
 
-/* â”€â”€ Paragraph readability â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Paragraph readability ───────────────────────────────── */
 .aap-live-shell p {
     max-width: 68ch;
     line-height: 1.72;
@@ -87,7 +80,7 @@ body, .aap-live-shell {
     max-width: 58ch;
 }
 
-/* â”€â”€ Hero panel premium polish â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Hero panel premium polish ───────────────────────────── */
 .aap-live-shell .aap-home-lead-panel,
 .aap-live-shell .aap-hero-shell {
     position: relative;
@@ -110,7 +103,7 @@ body, .aap-live-shell {
     z-index: 1;
 }
 
-/* â”€â”€ Service / feature cards: deeper hover lift â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Service / feature cards: deeper hover lift ──────────── */
 .aap-live-shell .aap-service-card,
 .aap-live-shell .aap-proof-card,
 .aap-live-shell .aap-ops-card,
@@ -167,7 +160,7 @@ body, .aap-live-shell {
     transform: scaleX(1);
 }
 
-/* â”€â”€ Buttons: premium shimmer sweep + deeper shadow â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Buttons: premium shimmer sweep + deeper shadow ──────── */
 .aap-live-shell .aap-btn,
 .aap-live-shell .aap-global-cta,
 .aap-live-shell .aap-footer-btn,
@@ -215,7 +208,7 @@ body, .aap-live-shell {
     transform: translateY(0);
 }
 
-/* â”€â”€ Stat/proof cards: gradient gold-blue numerals â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Stat/proof cards: gradient gold-blue numerals ──────── */
 .aap-live-shell .aap-proof-card .stat-number,
 .aap-live-shell .aap-proof-card strong,
 .aap-live-shell .aap-mini-stat strong,
@@ -228,7 +221,7 @@ body, .aap-live-shell {
     letter-spacing: -0.03em;
 }
 
-/* â”€â”€ Quote / testimonial editorial treatment â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Quote / testimonial editorial treatment ─────────────── */
 .aap-live-shell .aap-quote,
 .aap-live-shell blockquote,
 .aap-live-shell .aap-testimonial,
@@ -240,7 +233,7 @@ body, .aap-live-shell {
     letter-spacing: -0.01em;
 }
 
-/* â”€â”€ Sticky header refinement (already sticky per real CSS) â”€â”€â”€â”€ */
+/* ── Sticky header refinement (already sticky per real CSS) ──── */
 .aap-live-shell .aap-global-header,
 .aap-live-shell .aap-global-header-bar {
     backdrop-filter: saturate(180%) blur(14px);
@@ -251,7 +244,7 @@ body, .aap-live-shell {
     letter-spacing: 0.01em;
 }
 
-/* â”€â”€ Form polish: better focus ring, 48px min height â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Form polish: better focus ring, 48px min height ─────── */
 .aap-live-shell input[type="text"],
 .aap-live-shell input[type="email"],
 .aap-live-shell input[type="tel"],
@@ -273,7 +266,7 @@ body, .aap-live-shell {
 }
 .aap-live-shell textarea { line-height: 1.65; }
 
-/* â”€â”€ Trust bar: better rhythm, gold accent â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Trust bar: better rhythm, gold accent ───────────────── */
 .aap-live-shell .aap-home-trust-band,
 .aap-live-shell .aap-home-trust-grid {
     letter-spacing: 0.02em;
@@ -284,14 +277,14 @@ body, .aap-live-shell {
     font-weight: 700 !important;
 }
 
-/* â”€â”€ Focus-visible ring for a11y â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Focus-visible ring for a11y ─────────────────────────── */
 .aap-live-shell :focus-visible {
     outline: 3px solid #38bdf8;
     outline-offset: 3px;
     border-radius: 4px;
 }
 
-/* â”€â”€ Portrait image polish (founder photo) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Portrait image polish (founder photo) ───────────────── */
 .aap-live-shell img.aap-portrait,
 .aap-live-shell .aap-hero-photo img,
 .aap-live-shell .aap-hero-visual img,
@@ -301,7 +294,7 @@ body, .aap-live-shell {
     border: 1px solid rgba(201, 169, 97, 0.18);
 }
 
-/* â”€â”€ Scroll reveal (subtle, prefers-reduced-motion aware) â”€ */
+/* ── Scroll reveal (subtle, prefers-reduced-motion aware) ─ */
 @media (prefers-reduced-motion: no-preference) {
     .aap-live-shell .aap-reveal,
     .aap-live-shell [data-aap-reveal] {
@@ -316,14 +309,14 @@ body, .aap-live-shell {
     }
 }
 
-/* â”€â”€ Section rhythm / divider refinement â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Section rhythm / divider refinement ─────────────────── */
 .aap-live-shell .aap-panel,
 .aap-live-shell .aap-panel-inner,
 .aap-live-shell .aap-bottom-panel {
     position: relative;
 }
 
-/* â”€â”€ Footer polish â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Footer polish ───────────────────────────────────────── */
 .aap-live-shell .aap-live-footer,
 .aap-live-shell .aap-live-footer-shell {
     position: relative;
@@ -348,7 +341,7 @@ body, .aap-live-shell {
     color: #f3ca81 !important;
 }
 
-/* â”€â”€ Social icons polish â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Social icons polish ─────────────────────────────────── */
 .aap-live-shell .aap-social-icon,
 .aap-live-shell .aap-social-links a,
 .aap-live-shell .aap-social-links-footer a,
@@ -362,14 +355,14 @@ body, .aap-live-shell {
     color: #f3ca81 !important;
 }
 
-/* â”€â”€ Tag / pill polish â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Tag / pill polish ───────────────────────────────────── */
 .aap-live-shell .aap-tag-row a,
 .aap-live-shell .aap-tag,
 .aap-live-shell .aap-systems-logos > * {
     transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease !important;
 }
 
-/* â”€â”€ STICKY MOBILE CTA BAR (new component) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── STICKY MOBILE CTA BAR (new component) ───────────────── */
 .aap-mobile-cta-bar {
     display: none;
     position: fixed;
@@ -417,7 +410,7 @@ body, .aap-live-shell {
     transform: translateY(-1px);
 }
 
-/* â”€â”€ Responsive â€” match existing 767/1100/1220 breakpoints â”€ */
+/* ── Responsive — match existing 767/1100/1220 breakpoints ─ */
 @media (max-width: 1100px) {
     .aap-live-shell .aap-service-grid,
     .aap-live-shell .aap-growth-path-grid,
@@ -459,14 +452,14 @@ body, .aap-live-shell {
     .aap-mobile-cta-bar a { font-size: 0.82rem; padding: 0.75rem 0.5rem; }
 }
 
-/* â”€â”€ Print â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Print ───────────────────────────────────────────────── */
 @media print {
     .aap-mobile-cta-bar,
     .aap-global-header,
     .aap-live-footer { display: none !important; }
 }
 
-/* â”€â”€ Reduced motion respect (already declared in main CSS) â”€ */
+/* ── Reduced motion respect (already declared in main CSS) ─ */
 @media (prefers-reduced-motion: reduce) {
     .aap-live-shell .aap-btn::after,
     .aap-live-shell .aap-global-cta::after { display: none !important; }
@@ -478,4 +471,4 @@ body, .aap-live-shell {
     }
 }
 
-/* â”€â”€ END â€” AAP PREMIUM OVERLAY v1.0 â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── END — AAP PREMIUM OVERLAY v1.0 ──────────────────────── */
