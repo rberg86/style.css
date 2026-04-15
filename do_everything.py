@@ -155,24 +155,35 @@ EMPTY_STR = pq('')
 
 # Replace the old footer business description with a sharper one
 OLD_FOOTER_DESC = pq('Practical execution, sharper visibility, and steadier follow-through for teams that are tired of work getting lost between systems.')
-NEW_FOOTER_DESC = pq('Billing, credentialing, revenue cycle, and practice operations consulting for behavioral health and outpatient teams. We stabilize reimbursement, cut workflow friction, and build systems that actually get used \u2014 without the generic outsourcing theater.')
+NEW_FOOTER_DESC = pq('Billing, credentialing, revenue cycle, and practice operations support for behavioral health and outpatient teams. Built around real implementation \u2014 not dashboards, not promises, not generic outsourcing language.')
 
-# Moda recognition HTML block (inserted after hero on home page)
+# Also strip the legacy plain footer paragraph "support for behavioral health..."
+# that lives next to the brand and duplicates the description. We remove it via regex.
+LEGACY_FOOTER_P_REGEX = pq('#<p(?![^>]*class)[^>]*>support for behavioral health[^<]*</p>#is')
+
+# Moda / Nate recognition HTML — rewritten in Ryan's voice after seeing the
+# actual image (it's a PMHNP named Nate writing a GOATs list mid-thread on a
+# Moda reimbursement email; Ryan is named GOAT of Insurance Accountability).
 MODA_HTML = (
     '<section class="aap-moda-recognition" aria-label="Recognition">'
     '<div class="aap-moda-inner">'
     '<div class="aap-moda-copy">'
-    '<span class="aap-moda-tag">Real reimbursement, real payer</span>'
+    '<span class="aap-moda-tag">From a PMHNP, unsolicited</span>'
     '<span class="aap-kicker">Recognition</span>'
-    '<h2>PMHNP practice. Moda Health. Reimbursement landed.</h2>'
-    '<p>This is what follow-through looks like when a claim that other vendors wrote off gets reworked, re-argued, and paid. The kind of result generic outsourcing rarely produces.</p>'
-    '<a class="aap-btn" href="/contact/#aap-contact-form">Talk to us</a>'
+    '<h2>Mid-thread on a Moda reimbursement, a PMHNP wrote his personal GOATs list and put me on it.</h2>'
+    '<p>Nate is a psychiatric-mental health nurse practitioner I was working with on a Moda Health reimbursement issue. '
+    'Part way through the email thread, he stopped talking about the claim and wrote out his own list of GOATs \u2014 '
+    'Tom Brady, Michael Jordan, Muhammed Ali, Houdini, and me for insurance accountability. I kept the screenshot. '
+    'Coming from a clinician actually practicing in the field, it means more than anything I could put in a marketing testimonial.</p>'
+    '<a class="aap-btn" href="/contact/#aap-contact-form">Start a conversation</a>'
     '</div>'
     '<figure class="aap-moda-figure">'
     '<img src="https://advanceapractice.com/wp-content/uploads/2026/04/moda-reimbursement-email-ryan-berg.jpg" '
-    'alt="Moda Health reimbursement confirmation email \u2014 recovered payment for a PMHNP practice served by AdvanceAPractice" '
+    'alt="Email from Nate, a PMHNP, to Ryan Berg on a Moda Health reimbursement thread. '
+    'Nate wrote a GOATs list: Tom Brady (football), Michael Jordan (basketball), '
+    'Muhammed Ali (boxing), Ryan Berg (insurance accountability), Houdini (magic)." '
     'loading="lazy" width="1968" height="1559" />'
-    '<figcaption>Reimbursement confirmation \u2014 Moda Health, behavioral health practice</figcaption>'
+    '<figcaption>Email from an ongoing Moda Health thread. Sender name and address redacted.</figcaption>'
     '</figure>'
     '</div>'
     '</section>'
@@ -211,16 +222,19 @@ hook = NL.join([
     f"        $html = preg_replace( {FOUNDER_LC_REGEX}, {EMPTY_STR}, $html );",
     "        /* Replace legacy footer business description with the sharper one */",
     f"        $html = str_replace( {OLD_FOOTER_DESC}, {NEW_FOOTER_DESC}, $html );",
-    "        /* Inject Moda recognition block right after the hero panel on home page */",
-    f"        if ( stripos( $html, 'aap-moda-recognition' ) === false && stripos( $html, 'aap-home-lead-panel' ) !== false ) {{",
-    "            /* Find the closing </section> of the hero panel and inject after it */",
-    f"            $hero_marker = {pq('</section>')};",
-    f"            $hero_pos = stripos( $html, 'aap-home-lead-panel' );",
-    "            if ( $hero_pos !== false ) {",
-    "                $end_pos = stripos( $html, '</section>', $hero_pos );",
-    "                if ( $end_pos !== false ) {",
-    "                    $end_pos = $end_pos + strlen( $hero_marker );",
-    f"                    $html = substr( $html, 0, $end_pos ) . {MODA_LITERAL} . substr( $html, $end_pos );",
+    "        /* Strip the legacy plain <p>support for behavioral health...</p> above the footer desc */",
+    f"        $html = preg_replace( {LEGACY_FOOTER_P_REGEX}, {EMPTY_STR}, $html );",
+    "        /* Inject Moda/Nate GOAT recognition block AFTER the hero <section> closes.",
+    "           The hero is <section id=\"aap-home-lead-panel\">...</section>. We find the",
+    "           opening tag with the id attribute (not the style tag which matches on class),",
+    "           then advance past the first </section> after the opening. */",
+    f"        if ( stripos( $html, 'aap-moda-recognition' ) === false ) {{",
+    f"            $hero_open = stripos( $html, '<section id={DQ}aap-home-lead-panel{DQ}' );",
+    "            if ( $hero_open !== false ) {",
+    "                $hero_close = stripos( $html, '</section>', $hero_open );",
+    "                if ( $hero_close !== false ) {",
+    "                    $inject_at = $hero_close + strlen( '</section>' );",
+    f"                    $html = substr( $html, 0, $inject_at ) . {MODA_LITERAL} . substr( $html, $inject_at );",
     '                }',
     '            }',
     '        }',
