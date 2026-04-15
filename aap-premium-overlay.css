@@ -134,21 +134,30 @@ html body.aap-hotfix .aap-live-footer h3 {
     text-wrap: balance;
 }
 
-/* H1 — breathe + editorial weight, wide-open line length */
-html body.aap-hotfix h1,
-html body.aap-hotfix .aap-live-main h1,
-html body.aap-hotfix .aap-live-main .section-heading h1,
-html body.aap-hotfix .aap-live-main .hero-copy h1,
-html body.aap-hotfix .aap-home-lead-copy h1,
-html body.aap-hotfix .aap-hero-shell h1 {
+/* H1 — breathe + editorial weight, wide-open line length.
+   Uses 4-class body chain [body.aap-hotfix[class*="aap-page-"]] to beat the
+   plugin's `body.aap-page-home .aap-live-main .hero .section-heading h1`
+   4-class/2-tag rule. Chained body classes push specificity to 5/2. */
+html body.aap-hotfix[class*="aap-page-"] h1,
+html body.aap-hotfix[class*="aap-page-"] .aap-live-main h1,
+html body.aap-hotfix[class*="aap-page-"] .aap-live-main .hero h1,
+html body.aap-hotfix[class*="aap-page-"] .aap-live-main .section-heading h1,
+html body.aap-hotfix[class*="aap-page-"] .aap-live-main .hero-copy h1,
+html body.aap-hotfix[class*="aap-page-"] .aap-live-main .hero .section-heading h1,
+html body.aap-hotfix[class*="aap-page-"] .aap-live-main .hero .hero-copy h1,
+html body.aap-hotfix[class*="aap-page-"] .aap-home-lead-copy h1,
+html body.aap-hotfix[class*="aap-page-"] .aap-home-lead-shell h1,
+html body.aap-hotfix[class*="aap-page-"] .aap-hero-shell h1,
+html body.aap-hotfix[class*="aap-page-"] .aap-hero-shell-copy h1 {
     font-weight: 600 !important;
-    line-height: 1.06 !important;
+    line-height: 1.04 !important;
     letter-spacing: -0.032em !important;
     max-width: none !important;
-    width: 100% !important;
+    width: auto !important;
     margin-top: 0.5rem !important;
     margin-bottom: 1.25rem !important;
-    font-size: clamp(2.4rem, 4.2vw + 1rem, 5.5rem) !important;
+    font-size: clamp(2.5rem, 1.8rem + 4.2vw, 5.6rem) !important;
+    text-wrap: balance;
     animation: aapx-fade-up 0.85s var(--aapx-ease-out) both;
 }
 
@@ -164,16 +173,21 @@ html body.aap-hotfix .aap-hero-shell h1 {
                aapx-gradient-shift 12s ease-in-out infinite;
 }
 
-html body.aap-hotfix h2,
-html body.aap-hotfix .aap-live-main h2,
-html body.aap-hotfix .aap-live-main .section-heading h2 {
+html body.aap-hotfix[class*="aap-page-"] h2,
+html body.aap-hotfix[class*="aap-page-"] .aap-live-main h2,
+html body.aap-hotfix[class*="aap-page-"] .aap-live-main .hero h2,
+html body.aap-hotfix[class*="aap-page-"] .aap-live-main .section-heading h2,
+html body.aap-hotfix[class*="aap-page-"] .aap-live-main .hero .section-heading h2,
+html body.aap-hotfix[class*="aap-page-"] .aap-panel h2,
+html body.aap-hotfix[class*="aap-page-"] .aap-panel-inner h2 {
     font-weight: 600 !important;
-    line-height: 1.14 !important;
+    line-height: 1.12 !important;
     letter-spacing: -0.02em !important;
     margin-bottom: 1rem !important;
     max-width: none !important;
-    width: 100% !important;
-    font-size: clamp(1.9rem, 2.6vw + 0.8rem, 3.4rem) !important;
+    width: auto !important;
+    font-size: clamp(1.9rem, 1.2rem + 2.8vw, 3.6rem) !important;
+    text-wrap: balance;
 }
 
 html body.aap-hotfix h3,
@@ -207,46 +221,54 @@ html body.aap-hotfix .aap-kicker + p {
 }
 
 /* ── HEADER PREMIUM POLISH ───────────────────────────── */
+/* PRESERVE the plugin's light glass header background (white frosted);
+   only enhance blur + animate a bottom hairline + add hover effects.
+   Do NOT override the background or nav text color. */
 html body.aap-hotfix .aap-global-header,
 html body.aap-hotfix .aap-global-header-bar {
-    backdrop-filter: saturate(180%) blur(16px) !important;
-    -webkit-backdrop-filter: saturate(180%) blur(16px) !important;
-    background: linear-gradient(180deg, rgba(12, 22, 39, 0.94) 0%, rgba(12, 22, 39, 0.88) 100%) !important;
-    border-bottom: 1px solid rgba(201, 169, 97, 0.14) !important;
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04), 0 20px 40px -24px rgba(6, 11, 24, 0.5) !important;
+    backdrop-filter: saturate(180%) blur(14px) !important;
+    -webkit-backdrop-filter: saturate(180%) blur(14px) !important;
+    box-shadow: 0 1px 0 rgba(15, 23, 42, 0.04),
+                0 20px 40px -28px rgba(15, 23, 42, 0.18) !important;
     transition: padding var(--aapx-dur) var(--aapx-ease-smooth),
                 box-shadow var(--aapx-dur) var(--aapx-ease-smooth) !important;
 }
 
-/* Animated gold hairline under the header */
+/* Animated blue/gold hairline under the (light) header */
 html body.aap-hotfix .aap-global-header::after,
 html body.aap-hotfix .aap-global-header-bar::after {
     content: '';
     position: absolute;
     left: 0; right: 0; bottom: -1px;
-    height: 1px;
-    background: linear-gradient(90deg, transparent 0%, rgba(201, 169, 97, 0.55) 50%, transparent 100%);
+    height: 2px;
+    background: linear-gradient(90deg,
+        rgba(26, 86, 219, 0) 0%,
+        rgba(26, 86, 219, 0.6) 30%,
+        rgba(201, 169, 97, 0.6) 70%,
+        rgba(14, 165, 233, 0) 100%);
     background-size: 200% 100%;
     animation: aapx-gradient-shift 8s ease-in-out infinite;
     pointer-events: none;
 }
 
-/* Brand wordmark micro-animation */
+/* Brand wordmark micro-animation (dark text on light bg) */
 html body.aap-hotfix .aap-global-brand,
 html body.aap-hotfix .aap-global-brand-copy {
+    font-family: var(--aapx-font-display) !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.015em !important;
     transition: letter-spacing var(--aapx-dur) var(--aapx-ease-out),
                 color var(--aapx-dur) var(--aapx-ease-out) !important;
 }
 html body.aap-hotfix .aap-global-brand:hover,
 html body.aap-hotfix .aap-global-brand-copy:hover {
-    letter-spacing: 0.04em !important;
-    color: #c9a961 !important;
+    letter-spacing: 0 !important;
+    color: #1a56db !important;
 }
 
-/* Nav links with sliding gold underline */
+/* Nav links — light header, dark text. Slide-underline stays blue/gold. */
 html body.aap-hotfix .aap-global-nav a {
     position: relative;
-    color: rgba(226, 232, 240, 0.92) !important;
     font-family: var(--aapx-font-sans) !important;
     font-weight: 500 !important;
     font-size: 0.92rem !important;
@@ -259,13 +281,13 @@ html body.aap-hotfix .aap-global-nav a::after {
     position: absolute;
     left: 0; right: 0; bottom: -2px;
     height: 2px;
-    background: linear-gradient(90deg, #38bdf8 0%, #c9a961 100%);
+    background: linear-gradient(90deg, #1a56db 0%, #c9a961 100%);
     transform: scaleX(0);
     transform-origin: center;
     transition: transform var(--aapx-dur) var(--aapx-ease-out);
 }
 html body.aap-hotfix .aap-global-nav a:hover {
-    color: #ffffff !important;
+    color: #1a56db !important;
 }
 html body.aap-hotfix .aap-global-nav a:hover::after {
     transform: scaleX(1);
