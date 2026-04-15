@@ -1,0 +1,926 @@
+[
+  {
+    "plugin": "aap-hotfix-v1254/aap-hotfix",
+    "status": "active",
+    "name": "AAP Hotfix",
+    "plugin_uri": "",
+    "author": "AdvanceAPractice",
+    "author_uri": "",
+    "description": {
+      "raw": "Live hotfix layer for AdvanceAPractice that repairs links, routes forms to Ryan, suppresses legacy artifacts, and normalizes key SEO metadata.",
+      "rendered": "Live hotfix layer for AdvanceAPractice that repairs links, routes forms to Ryan, suppresses legacy artifacts, and normalizes key SEO metadata. <cite>By AdvanceAPractice.</cite>"
+    },
+    "version": "1.2.61",
+    "network_only": false,
+    "requires_wp": "",
+    "requires_php": "",
+    "textdomain": "aap-hotfix-v1254",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/aap-hotfix-v1254/aap-hotfix",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "advanceapractice-lead-capture-v145/advanceapractice-lead-capture",
+    "status": "active",
+    "name": "AdvanceAPractice Lead Capture",
+    "plugin_uri": "",
+    "author": "AdvanceAPractice",
+    "author_uri": "",
+    "description": {
+      "raw": "Captures AdvanceAPractice website leads, stores them in WordPress, emails Ryan automatically, and seeds the core site pages.",
+      "rendered": "Captures AdvanceAPractice website leads, stores them in WordPress, emails Ryan automatically, and seeds the core site pages. <cite>By AdvanceAPractice.</cite>"
+    },
+    "version": "1.4.3",
+    "network_only": false,
+    "requires_wp": "",
+    "requires_php": "",
+    "textdomain": "advanceapractice-lead-capture-v145",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/advanceapractice-lead-capture-v145/advanceapractice-lead-capture",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "ai-engine/ai-engine",
+    "status": "active",
+    "name": "AI Engine",
+    "plugin_uri": "https://wordpress.org/plugins/ai-engine/",
+    "author": "Jordy Meow",
+    "author_uri": "https://jordymeow.com",
+    "description": {
+      "raw": "AI meets WordPress. Your site can now chat, write poetry, solve problems, and maybe make you coffee.",
+      "rendered": "AI meets WordPress. Your site can now chat, write poetry, solve problems, and maybe make you coffee. <cite>By <a href=\"https://jordymeow.com\">Jordy Meow</a>.</cite>"
+    },
+    "version": "3.4.6",
+    "network_only": false,
+    "requires_wp": "",
+    "requires_php": "",
+    "textdomain": "ai-engine",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/ai-engine/ai-engine",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "akismet/akismet",
+    "status": "active",
+    "name": "Akismet Anti-spam: Spam Protection",
+    "plugin_uri": "https://akismet.com/",
+    "author": "Automattic - Anti-spam Team",
+    "author_uri": "https://automattic.com/wordpress-plugins/",
+    "description": {
+      "raw": "Used by millions, Akismet is quite possibly the best way in the world to <strong>protect your blog from spam</strong>. Akismet Anti-spam keeps your site protected even while you sleep. To get started: activate the Akismet plugin and then go to your Akismet Settings page to set up your API key.",
+      "rendered": "Used by millions, Akismet is quite possibly the best way in the world to <strong>protect your blog from spam</strong>. Akismet Anti-spam keeps your site protected even while you sleep. To get started: activate the Akismet plugin and then go to your Akismet Settings page to set up your API key. <cite>By <a href=\"https://automattic.com/wordpress-plugins/\">Automattic - Anti-spam Team</a>.</cite>"
+    },
+    "version": "5.6",
+    "network_only": false,
+    "requires_wp": "5.8",
+    "requires_php": "7.2",
+    "textdomain": "akismet",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/akismet/akismet",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "all-in-one-wp-migration/all-in-one-wp-migration",
+    "status": "active",
+    "name": "All-in-One WP Migration and Backup",
+    "plugin_uri": "https://servmask.com/",
+    "author": "ServMask",
+    "author_uri": "https://servmask.com/",
+    "description": {
+      "raw": "All-in-One WP Migration makes moving your entire WordPress site simple. Export or import your database, media, plugins, and themes with just a few clicks.",
+      "rendered": "All-in-One WP Migration makes moving your entire WordPress site simple. Export or import your database, media, plugins, and themes with just a few clicks. <cite>By <a href=\"https://servmask.com/\">ServMask</a>.</cite>"
+    },
+    "version": "7.104",
+    "network_only": true,
+    "requires_wp": "",
+    "requires_php": "",
+    "textdomain": "all-in-one-wp-migration",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/all-in-one-wp-migration/all-in-one-wp-migration",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "pojo-accessibility/pojo-accessibility",
+    "status": "active",
+    "name": "Ally - Web Accessibility &amp; Usability",
+    "plugin_uri": "https://elementor.com/",
+    "author": "Elementor.com",
+    "author_uri": "https://elementor.com/",
+    "description": {
+      "raw": "Improve your website’s accessibility with ease. Customize capabilities such as text resizing, contrast modes, link highlights, and easily generate an accessibility statement to demonstrate your commitment to inclusivity.",
+      "rendered": "Improve your website’s accessibility with ease. Customize capabilities such as text resizing, contrast modes, link highlights, and easily generate an accessibility statement to demonstrate your commitment to inclusivity. <cite>By <a href=\"https://elementor.com/\">Elementor.com</a>.</cite>"
+    },
+    "version": "4.1.0",
+    "network_only": false,
+    "requires_wp": "",
+    "requires_php": "",
+    "textdomain": "pojo-accessibility",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/pojo-accessibility/pojo-accessibility",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "astra-hooks/astra-hooks",
+    "status": "active",
+    "name": "Astra Hooks",
+    "plugin_uri": "https://wpastra.com/",
+    "author": "Brainstorm Force",
+    "author_uri": "http://www.brainstormforce.com",
+    "description": {
+      "raw": "Customizer Hooks for Theme.",
+      "rendered": "Customizer Hooks for Theme. <cite>By <a href=\"http://www.brainstormforce.com\">Brainstorm Force</a>.</cite>"
+    },
+    "version": "1.0.2",
+    "network_only": false,
+    "requires_wp": "",
+    "requires_php": "",
+    "textdomain": "astra-hooks",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/astra-hooks/astra-hooks",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "code-snippets/code-snippets",
+    "status": "active",
+    "name": "Code Snippets",
+    "plugin_uri": "https://codesnippets.pro",
+    "author": "Code Snippets Pro",
+    "author_uri": "https://codesnippets.pro",
+    "description": {
+      "raw": "An easy, clean and simple way to run code snippets on your site. No need to edit to your theme's functions.php file again!",
+      "rendered": "An easy, clean and simple way to run code snippets on your site. No need to edit to your theme&#8217;s functions.php file again! <cite>By <a href=\"https://codesnippets.pro\">Code Snippets Pro</a>.</cite>"
+    },
+    "version": "3.9.5",
+    "network_only": false,
+    "requires_wp": "5.0",
+    "requires_php": "7.4",
+    "textdomain": "code-snippets",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/code-snippets/code-snippets",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "coming-soon/coming-soon",
+    "status": "active",
+    "name": "Coming Soon Page, Maintenance Mode, Landing Pages &amp; WordPress Website Builder by SeedProd",
+    "plugin_uri": "https://www.seedprod.com/lite-upgrade/?utm_source=WordPress&#038;utm_campaign=liteplugin&#038;utm_medium=plugin-uri-link",
+    "author": "SeedProd",
+    "author_uri": "https://www.seedprod.com/lite-upgrade/?utm_source=WordPress&#038;utm_campaign=liteplugin&#038;utm_medium=author-uri-link",
+    "description": {
+      "raw": "The Easiest WordPress Drag &amp; Drop Page Builder that allows you to build your website, create Landing Pages, Coming Soon Pages, Maintenance Mode Pages and more.",
+      "rendered": "The Easiest WordPress Drag &amp; Drop Page Builder that allows you to build your website, create Landing Pages, Coming Soon Pages, Maintenance Mode Pages and more. <cite>By <a href=\"https://www.seedprod.com/lite-upgrade/?utm_source=WordPress&#038;utm_campaign=liteplugin&#038;utm_medium=author-uri-link\">SeedProd</a>.</cite>"
+    },
+    "version": "6.19.9",
+    "network_only": false,
+    "requires_wp": "",
+    "requires_php": "",
+    "textdomain": "coming-soon",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/coming-soon/coming-soon",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "easy-mcp-ai/easy-mcp-ai",
+    "status": "active",
+    "name": "Easy MCP AI",
+    "plugin_uri": "https://easymcpai.com",
+    "author": "EasyMCPAI",
+    "author_uri": "",
+    "description": {
+      "raw": "Model Context Protocol (MCP) server for WordPress. Expose your WordPress site's API as MCP tools for AI assistants like Claude Code, n8n, and more.",
+      "rendered": "Model Context Protocol (MCP) server for WordPress. Expose your WordPress site&#8217;s API as MCP tools for AI assistants like Claude Code, n8n, and more. <cite>By EasyMCPAI.</cite>"
+    },
+    "version": "1.3.1",
+    "network_only": false,
+    "requires_wp": "6.0",
+    "requires_php": "7.4",
+    "textdomain": "easy-mcp-ai",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/easy-mcp-ai/easy-mcp-ai",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "elementor/elementor",
+    "status": "active",
+    "name": "Elementor",
+    "plugin_uri": "https://elementor.com/?utm_source=wp-plugins&#038;utm_campaign=plugin-uri&#038;utm_medium=wp-dash",
+    "author": "Elementor.com",
+    "author_uri": "https://elementor.com/?utm_source=wp-plugins&#038;utm_campaign=author-uri&#038;utm_medium=wp-dash",
+    "description": {
+      "raw": "The Elementor Website Builder has it all: drag and drop page builder, Atomic Editor, pixel perfect design, global and reusable style systems, mobile responsive editing, and more. Get started now!",
+      "rendered": "The Elementor Website Builder has it all: drag and drop page builder, Atomic Editor, pixel perfect design, global and reusable style systems, mobile responsive editing, and more. Get started now! <cite>By <a href=\"https://elementor.com/?utm_source=wp-plugins&#038;utm_campaign=author-uri&#038;utm_medium=wp-dash\">Elementor.com</a>.</cite>"
+    },
+    "version": "4.0.1",
+    "network_only": false,
+    "requires_wp": "6.6",
+    "requires_php": "7.4",
+    "textdomain": "elementor",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/elementor/elementor",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "elementor-pro/elementor-pro",
+    "status": "active",
+    "name": "Elementor Pro",
+    "plugin_uri": "https://go.elementor.com/wp-dash-wp-plugins-author-uri/",
+    "author": "Elementor.com",
+    "author_uri": "https://go.elementor.com/wp-dash-wp-plugins-author-uri/",
+    "description": {
+      "raw": "Elevate your designs and unlock the full power of the Atomic Editor. Gain access to dozens of Pro widgets, Website Templates, Theme Builder, Pop Ups, Forms, reusable Components, and WooCommerce building capabilities.",
+      "rendered": "Elevate your designs and unlock the full power of the Atomic Editor. Gain access to dozens of Pro widgets, Website Templates, Theme Builder, Pop Ups, Forms, reusable Components, and WooCommerce building capabilities. <cite>By <a href=\"https://go.elementor.com/wp-dash-wp-plugins-author-uri/\">Elementor.com</a>.</cite>"
+    },
+    "version": "4.0.1",
+    "network_only": false,
+    "requires_wp": "6.7",
+    "requires_php": "7.4",
+    "textdomain": "elementor-pro",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/elementor-pro/elementor-pro",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "header-footer-code-manager/99robots-header-footer-code-manager",
+    "status": "active",
+    "name": "Header Footer Code Manager",
+    "plugin_uri": "https://draftpress.com/products",
+    "author": "DraftPress",
+    "author_uri": "https://draftpress.com/",
+    "description": {
+      "raw": "Header Footer Code Manager is a quick and simple way for you to add tracking code snippets, conversion pixels, or other scripts required by third party services for analytics, tracking, marketing, or chat functions. Used by 700,000+ sites. For detailed documentation, please visit the plugin’s <a href=\"https://draftpress.com/\"> official page</a>.",
+      "rendered": "Header Footer Code Manager is a quick and simple way for you to add tracking code snippets, conversion pixels, or other scripts required by third party services for analytics, tracking, marketing, or chat functions. Used by 700,000+ sites. For detailed documentation, please visit the plugin’s <a href=\"https://draftpress.com/\"> official page</a>. <cite>By <a href=\"https://draftpress.com/\">DraftPress</a>.</cite>"
+    },
+    "version": "1.1.44",
+    "network_only": false,
+    "requires_wp": "4.9",
+    "requires_php": "5.6.20",
+    "textdomain": "header-footer-code-manager",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/header-footer-code-manager/99robots-header-footer-code-manager",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "hostinger-affiliate-plugin/hostinger-affiliate-plugin",
+    "status": "active",
+    "name": "Hostinger Affiliate Marketing Tools",
+    "plugin_uri": "https://hostinger.com",
+    "author": "Hostinger",
+    "author_uri": "https://hostinger.com",
+    "description": {
+      "raw": "Create and promote products using affiliate links from different marketplaces. Easily manage and display affiliate products on your site.",
+      "rendered": "Create and promote products using affiliate links from different marketplaces. Easily manage and display affiliate products on your site. <cite>By <a href=\"https://hostinger.com\">Hostinger</a>.</cite>"
+    },
+    "version": "3.0.29",
+    "network_only": false,
+    "requires_wp": "5.9",
+    "requires_php": "8.1",
+    "textdomain": "hostinger-affiliate-plugin",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/hostinger-affiliate-plugin/hostinger-affiliate-plugin",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "hostinger-ai-assistant/hostinger-ai-assistant",
+    "status": "active",
+    "name": "Hostinger AI",
+    "plugin_uri": "https://hostinger.com",
+    "author": "Hostinger",
+    "author_uri": "https://hostinger.com",
+    "description": {
+      "raw": "Hostinger AI plugin for WordPress.",
+      "rendered": "Hostinger AI plugin for WordPress. <cite>By <a href=\"https://hostinger.com\">Hostinger</a>.</cite>"
+    },
+    "version": "3.0.33",
+    "network_only": false,
+    "requires_wp": "5.0",
+    "requires_php": "8.1",
+    "textdomain": "hostinger-ai-assistant",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/hostinger-ai-assistant/hostinger-ai-assistant",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "image-optimization/image-optimization",
+    "status": "active",
+    "name": "Image Optimizer - Compress, Resize and Optimize Images",
+    "plugin_uri": "https://go.elementor.com/wp-repo-description-tab-io-product-page/",
+    "author": "Elementor.com",
+    "author_uri": "https://go.elementor.com/author-uri-io/",
+    "description": {
+      "raw": "Automatically resize, optimize, and convert images to WebP and AVIF. Compress images in bulk or on upload to boost your WordPress site performance.",
+      "rendered": "Automatically resize, optimize, and convert images to WebP and AVIF. Compress images in bulk or on upload to boost your WordPress site performance. <cite>By <a href=\"https://go.elementor.com/author-uri-io/\">Elementor.com</a>.</cite>"
+    },
+    "version": "1.7.3",
+    "network_only": false,
+    "requires_wp": "",
+    "requires_php": "",
+    "textdomain": "image-optimization",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/image-optimization/image-optimization",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "litespeed-cache/litespeed-cache",
+    "status": "active",
+    "name": "LiteSpeed Cache",
+    "plugin_uri": "https://www.litespeedtech.com/products/cache-plugins/wordpress-acceleration",
+    "author": "LiteSpeed Technologies",
+    "author_uri": "https://www.litespeedtech.com",
+    "description": {
+      "raw": "High-performance page caching and site optimization from LiteSpeed",
+      "rendered": "High-performance page caching and site optimization from LiteSpeed <cite>By <a href=\"https://www.litespeedtech.com\">LiteSpeed Technologies</a>.</cite>"
+    },
+    "version": "7.8.0.1",
+    "network_only": false,
+    "requires_wp": "",
+    "requires_php": "",
+    "textdomain": "litespeed-cache",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/litespeed-cache/litespeed-cache",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "manage/manage",
+    "status": "active",
+    "name": "Manage",
+    "plugin_uri": "https://elementor.com/",
+    "author": "Elementor.com",
+    "author_uri": "http://go.elementor.com/author-uri-manage/",
+    "description": {
+      "raw": "Manage multiple WordPress websites from one place using your Elementor account. Safe updates, monitoring, and bulk actions powered by Elementor.",
+      "rendered": "Manage multiple WordPress websites from one place using your Elementor account. Safe updates, monitoring, and bulk actions powered by Elementor. <cite>By <a href=\"http://go.elementor.com/author-uri-manage/\">Elementor.com</a>.</cite>"
+    },
+    "version": "1.0.2",
+    "network_only": false,
+    "requires_wp": "",
+    "requires_php": "",
+    "textdomain": "manage",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/manage/manage",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "newsletter/plugin",
+    "status": "active",
+    "name": "Newsletter",
+    "plugin_uri": "https://www.thenewsletterplugin.com",
+    "author": "Stefano Lissa &amp; The Newsletter Team",
+    "author_uri": "https://www.thenewsletterplugin.com",
+    "description": {
+      "raw": "Newsletter is a cool plugin to create your own subscriber list, to send newsletters, to build your business. <strong>Before update give a look to <a href=\"https://www.thenewsletterplugin.com/category/release\">this page</a> to know what's changed.</strong>",
+      "rendered": "Newsletter is a cool plugin to create your own subscriber list, to send newsletters, to build your business. <strong>Before update give a look to <a href=\"https://www.thenewsletterplugin.com/category/release\">this page</a> to know what&#8217;s changed.</strong> <cite>By <a href=\"https://www.thenewsletterplugin.com\">Stefano Lissa &amp; The Newsletter Team</a>.</cite>"
+    },
+    "version": "9.2.1",
+    "network_only": false,
+    "requires_wp": "6.1",
+    "requires_php": "7.0",
+    "textdomain": "newsletter",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/newsletter/plugin",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "google-site-kit/google-site-kit",
+    "status": "active",
+    "name": "Site Kit by Google",
+    "plugin_uri": "https://sitekit.withgoogle.com",
+    "author": "Google",
+    "author_uri": "https://opensource.google.com",
+    "description": {
+      "raw": "Site Kit is a one-stop solution for WordPress users to use everything Google has to offer to make them successful on the web.",
+      "rendered": "Site Kit is a one-stop solution for WordPress users to use everything Google has to offer to make them successful on the web. <cite>By <a href=\"https://opensource.google.com\">Google</a>.</cite>"
+    },
+    "version": "1.175.0",
+    "network_only": false,
+    "requires_wp": "5.2",
+    "requires_php": "7.4",
+    "textdomain": "google-site-kit",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/google-site-kit/google-site-kit",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "site-mailer/site-mailer",
+    "status": "active",
+    "name": "Site Mailer - SMTP Replacement, Email API Deliverability &amp; Email Log",
+    "plugin_uri": "https://elementor.com/",
+    "author": "Elementor.com",
+    "author_uri": "https://go.elementor.com/author-url-sm/",
+    "description": {
+      "raw": "Effortlessly manage transactional emails with Site Mailer. High deliverability, logs and statistics, and no SMTP plugins needed.",
+      "rendered": "Effortlessly manage transactional emails with Site Mailer. High deliverability, logs and statistics, and no SMTP plugins needed. <cite>By <a href=\"https://go.elementor.com/author-url-sm/\">Elementor.com</a>.</cite>"
+    },
+    "version": "1.4.3",
+    "network_only": false,
+    "requires_wp": "",
+    "requires_php": "",
+    "textdomain": "site-mailer",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/site-mailer/site-mailer",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "templates-patterns-collection/templates-patterns-collection",
+    "status": "active",
+    "name": "Starter Sites &amp; Templates by Neve",
+    "plugin_uri": "",
+    "author": "Themeisle",
+    "author_uri": "https://themeisle.com",
+    "description": {
+      "raw": "This plugin gives you access to 100+ templates and ready-to-use starter sites. Neve theme is used for all the designs.",
+      "rendered": "This plugin gives you access to 100+ templates and ready-to-use starter sites. Neve theme is used for all the designs. <cite>By <a href=\"https://themeisle.com\">Themeisle</a>.</cite>"
+    },
+    "version": "1.2.25",
+    "network_only": false,
+    "requires_wp": "",
+    "requires_php": "",
+    "textdomain": "templates-patterns-collection",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/templates-patterns-collection/templates-patterns-collection",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "updraftplus/updraftplus",
+    "status": "active",
+    "name": "UpdraftPlus - Backup/Restore",
+    "plugin_uri": "https://updraftplus.com",
+    "author": "TeamUpdraft, DavidAnderson",
+    "author_uri": "https://updraftplus.com",
+    "description": {
+      "raw": "Backup and restore: take backups locally, or backup to Amazon S3, Dropbox, Google Drive, Rackspace, (S)FTP, WebDAV &amp; email, on automatic schedules.",
+      "rendered": "Backup and restore: take backups locally, or backup to Amazon S3, Dropbox, Google Drive, Rackspace, (S)FTP, WebDAV &amp; email, on automatic schedules. <cite>By <a href=\"https://updraftplus.com\">TeamUpdraft, DavidAnderson</a>.</cite>"
+    },
+    "version": "1.26.2",
+    "network_only": false,
+    "requires_wp": "",
+    "requires_php": "",
+    "textdomain": "updraftplus",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/updraftplus/updraftplus",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "insert-headers-and-footers/ihaf",
+    "status": "active",
+    "name": "WPCode Lite",
+    "plugin_uri": "https://www.wpcode.com/",
+    "author": "WPCode",
+    "author_uri": "https://www.wpcode.com/",
+    "description": {
+      "raw": "Easily add code snippets in WordPress. Insert scripts to the header and footer, add PHP code snippets with conditional logic, insert ads pixel, custom content, and more.",
+      "rendered": "Easily add code snippets in WordPress. Insert scripts to the header and footer, add PHP code snippets with conditional logic, insert ads pixel, custom content, and more. <cite>By <a href=\"https://www.wpcode.com/\">WPCode</a>.</cite>"
+    },
+    "version": "2.3.5",
+    "network_only": false,
+    "requires_wp": "5.0",
+    "requires_php": "7.0",
+    "textdomain": "insert-headers-and-footers",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/insert-headers-and-footers/ihaf",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "wp-external-links/wp-external-links",
+    "status": "active",
+    "name": "WP External Links",
+    "plugin_uri": "https://getwplinks.com/",
+    "author": "WebFactory Ltd",
+    "author_uri": "https://www.webfactoryltd.com/",
+    "description": {
+      "raw": "Open external links in a new tab or window, control \"nofollow\" and \"noopener\", set font icon; SEO friendly.",
+      "rendered": "Open external links in a new tab or window, control &#8220;nofollow&#8221; and &#8220;noopener&#8221;, set font icon; SEO friendly. <cite>By <a href=\"https://www.webfactoryltd.com/\">WebFactory Ltd</a>.</cite>"
+    },
+    "version": "2.64",
+    "network_only": false,
+    "requires_wp": "",
+    "requires_php": "",
+    "textdomain": "wp-external-links",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/wp-external-links/wp-external-links",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "wpforms-lite/wpforms",
+    "status": "active",
+    "name": "WPForms Lite",
+    "plugin_uri": "https://wpforms.com",
+    "author": "WPForms",
+    "author_uri": "https://wpforms.com",
+    "description": {
+      "raw": "Beginner friendly WordPress contact form plugin. Use our Drag &amp; Drop form builder to create your WordPress forms.",
+      "rendered": "Beginner friendly WordPress contact form plugin. Use our Drag &amp; Drop form builder to create your WordPress forms. <cite>By <a href=\"https://wpforms.com\">WPForms</a>.</cite>"
+    },
+    "version": "1.9.6.1",
+    "network_only": false,
+    "requires_wp": "5.5",
+    "requires_php": "7.2",
+    "textdomain": "wpforms-lite",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/wpforms-lite/wpforms",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "wordpress-seo/wp-seo",
+    "status": "active",
+    "name": "Yoast SEO",
+    "plugin_uri": "https://yoa.st/1uj",
+    "author": "Team Yoast",
+    "author_uri": "https://yoa.st/1uk",
+    "description": {
+      "raw": "The first true all-in-one SEO solution for WordPress, including on-page content analysis, XML sitemaps and much more.",
+      "rendered": "The first true all-in-one SEO solution for WordPress, including on-page content analysis, XML sitemaps and much more. <cite>By <a href=\"https://yoa.st/1uk\">Team Yoast</a>.</cite>"
+    },
+    "version": "25.3.1",
+    "network_only": false,
+    "requires_wp": "6.6",
+    "requires_php": "7.4",
+    "textdomain": "wordpress-seo",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/wordpress-seo/wp-seo",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "plugin": "zero-spam/wordpress-zero-spam",
+    "status": "active",
+    "name": "Zero Spam for WordPress",
+    "plugin_uri": "https://wordpress.com/plugins/zero-spam/",
+    "author": "Highfivery Studio",
+    "author_uri": "https://studio.highfivery.com/",
+    "description": {
+      "raw": "Tired of all the ineffective WordPress anti-spam &amp; security plugins? Zero Spam for WordPress makes blocking spam &amp; malicious activity a cinch. <strong>Just activate, configure, and say goodbye to spam.</strong>",
+      "rendered": "Tired of all the ineffective WordPress anti-spam &amp; security plugins? Zero Spam for WordPress makes blocking spam &amp; malicious activity a cinch. <strong>Just activate, configure, and say goodbye to spam.</strong> <cite>By <a href=\"https://studio.highfivery.com/\">Highfivery Studio</a>.</cite>"
+    },
+    "version": "5.5.8",
+    "network_only": false,
+    "requires_wp": "6.9",
+    "requires_php": "8.2",
+    "textdomain": "zero-spam",
+    "_links": {
+      "self": [
+        {
+          "href": "https://advanceapractice.com/wp-json/wp/v2/plugins/zero-spam/wordpress-zero-spam",
+          "targetHints": {
+            "allow": [
+              "GET",
+              "POST",
+              "PUT",
+              "PATCH",
+              "DELETE"
+            ]
+          }
+        }
+      ]
+    }
+  }
+]

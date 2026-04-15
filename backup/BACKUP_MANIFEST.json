@@ -1,0 +1,160 @@
+{
+  "backup_stamp": "2026-04-15_162854",
+  "site": "https://advanceapractice.com",
+  "pages_count": 20,
+  "media_count": 210,
+  "files": [
+    {
+      "path": "backup/do_everything.py",
+      "bytes": 24431
+    },
+    {
+      "path": "backup/emergency_revert.py",
+      "bytes": 3303
+    },
+    {
+      "path": "backup/css/aap-premium-overlay.css",
+      "bytes": 58663
+    },
+    {
+      "path": "backup/css/aap-premium-overlay.min.css",
+      "bytes": 45632
+    },
+    {
+      "path": "backup/media/media_library.json",
+      "bytes": 553625
+    },
+    {
+      "path": "backup/pages/about.html",
+      "bytes": 22852
+    },
+    {
+      "path": "backup/pages/ai-documentation.html",
+      "bytes": 22561
+    },
+    {
+      "path": "backup/pages/all_pages.json",
+      "bytes": 837262
+    },
+    {
+      "path": "backup/pages/ar-backlog-causes.html",
+      "bytes": 26745
+    },
+    {
+      "path": "backup/pages/contact.html",
+      "bytes": 22434
+    },
+    {
+      "path": "backup/pages/credentialing-delays-explained.html",
+      "bytes": 28129
+    },
+    {
+      "path": "backup/pages/credentialing-delays-killing-revenue.html",
+      "bytes": 32832
+    },
+    {
+      "path": "backup/pages/credentialing.html",
+      "bytes": 22827
+    },
+    {
+      "path": "backup/pages/denial-management-workflow.html",
+      "bytes": 27389
+    },
+    {
+      "path": "backup/pages/ehr-optimization-vs-replacement.html",
+      "bytes": 27116
+    },
+    {
+      "path": "backup/pages/ehr-workflow-optimization.html",
+      "bytes": 23023
+    },
+    {
+      "path": "backup/pages/home.html",
+      "bytes": 32277
+    },
+    {
+      "path": "backup/pages/medical-billing.html",
+      "bytes": 22873
+    },
+    {
+      "path": "backup/pages/mental-health-billing-mistakes.html",
+      "bytes": 29066
+    },
+    {
+      "path": "backup/pages/mental-health-billing.html",
+      "bytes": 23403
+    },
+    {
+      "path": "backup/pages/posts.json",
+      "bytes": 97598
+    },
+    {
+      "path": "backup/pages/practice-operations.html",
+      "bytes": 22548
+    },
+    {
+      "path": "backup/pages/practice-workflow-review-checklist.html",
+      "bytes": 25422
+    },
+    {
+      "path": "backup/pages/resources.html",
+      "bytes": 19619
+    },
+    {
+      "path": "backup/pages/revenue-cycle-management.html",
+      "bytes": 22840
+    },
+    {
+      "path": "backup/pages/timely-filing-guide.html",
+      "bytes": 29401
+    },
+    {
+      "path": "backup/pages/workflow-friction-audit.html",
+      "bytes": 21428
+    },
+    {
+      "path": "backup/plugin/aap-hotfix-v1254-LIVE.php",
+      "bytes": 409320
+    },
+    {
+      "path": "backup/plugin/aap-hotfix-v1254-ORIGINAL.php",
+      "bytes": 305464
+    },
+    {
+      "path": "backup/wp/admin_user.json",
+      "bytes": 11233
+    },
+    {
+      "path": "backup/wp/customizer_astra.css",
+      "bytes": 284
+    },
+    {
+      "path": "backup/wp/customizer_custom_css.json",
+      "bytes": 43763
+    },
+    {
+      "path": "backup/wp/customizer_hello-elementor.css",
+      "bytes": 162
+    },
+    {
+      "path": "backup/wp/customizer_neve.css",
+      "bytes": 42955
+    },
+    {
+      "path": "backup/wp/plugins_list.json",
+      "bytes": 34827
+    },
+    {
+      "path": "backup/wp/post_types.json",
+      "bytes": 20164
+    },
+    {
+      "path": "backup/wp/settings.json",
+      "bytes": 7217
+    },
+    {
+      "path": "backup/wp/themes_list.json",
+      "bytes": 21323
+    }
+  ]
+}

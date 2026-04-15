@@ -1,0 +1,9 @@
+/* Customizer Additional CSS for theme: astra
+ * Post ID: 11123
+ * Modified: 2024-03-07 07:09:47
+ * Backup: 2026-04-15_162854
+ */
+
+.ast-theme-transparent-header #ast-desktop-header>[CLASS*="-header-wrap"]:nth-last-child(2)>[CLASS*="-header-bar"] {
+	border-bottom-width: 0px;
+}

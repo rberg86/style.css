@@ -1,0 +1,219 @@
+{
+  "id": 1,
+  "username": "dev",
+  "name": "Ryan",
+  "first_name": "Ryan",
+  "last_name": "Berg",
+  "email": "info@advanceapractice.com",
+  "url": "http://advanceapractice.com",
+  "description": "",
+  "link": "https://advanceapractice.com/author/dev/",
+  "locale": "en_US",
+  "nickname": "Ryan",
+  "slug": "dev",
+  "roles": [
+    "administrator"
+  ],
+  "registered_date": "2023-07-01T10:37:36+00:00",
+  "avatar_urls": {
+    "24": "https://advanceapractice.com/wp-content/litespeed/avatar/b0cd55acade1c009a31437605454bff9.jpg?ver=1775915169",
+    "48": "https://advanceapractice.com/wp-content/litespeed/avatar/6cb43a2d5637020eb993ae7401c410e2.jpg?ver=1775915169",
+    "96": "https://advanceapractice.com/wp-content/litespeed/avatar/059c3d295a08c1a3aba1cdfc88584b78.jpg?ver=1775915170"
+  },
+  "meta": {
+    "persisted_preferences": {
+      "core/edit-post": {
+        "welcomeGuide": false
+      },
+      "_modified": "2026-03-29T04:38:24.293Z",
+      "core/edit-widgets": {
+        "welcomeGuide": false
+      },
+      "core/customize-widgets": {
+        "welcomeGuide": false,
+        "fixedToolbar": false
+      },
+      "core": {
+        "openPanels": [
+          "post-status",
+          "page-attributes",
+          "featured-image",
+          "post-excerpt",
+          "yoast-seo/document-panel"
+        ],
+        "isComplementaryAreaVisible": true
+      }
+    }
+  },
+  "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v25.3.1 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Ryan, Author at AdvanceAPractice</title>\n<!-- Admin only notice: this page does not show a meta description because it does not have one, either write it for this page specifically or go into the [Yoast SEO - Settings] menu and set up a template. -->\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://advanceapractice.com/author/dev/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"profile\" />\n<meta property=\"og:title\" content=\"Ryan, Author at AdvanceAPractice\" />\n<meta property=\"og:url\" content=\"https://advanceapractice.com/author/dev/\" />\n<meta property=\"og:site_name\" content=\"AdvanceAPractice\" />\n<meta property=\"og:image\" content=\"https://secure.gravatar.com/avatar/623e8c79556b544767ddd56264c2185ce675fe43e4d0eca02eaab56cc7629af7?s=500&d=mm&r=g\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"ProfilePage\",\"@id\":\"https://advanceapractice.com/author/dev/\",\"url\":\"https://advanceapractice.com/author/dev/\",\"name\":\"Ryan, Author at AdvanceAPractice\",\"isPartOf\":{\"@id\":\"https://advanceapractice.com/#website\"},\"breadcrumb\":{\"@id\":\"https://advanceapractice.com/author/dev/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://advanceapractice.com/author/dev/\"]}]},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://advanceapractice.com/author/dev/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://advanceapractice.com/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Archives for Ryan\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://advanceapractice.com/#website\",\"url\":\"https://advanceapractice.com/\",\"name\":\"AdvanceAPractice\",\"description\":\"National mental health billing, medical billing, credentialing, revenue cycle management, AI clinical documentation, and practice operations services for behavioral health and outpatient practices.\",\"publisher\":{\"@id\":\"https://advanceapractice.com/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://advanceapractice.com/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://advanceapractice.com/#organization\",\"name\":\"AdvanceAPractice Management Solutions\",\"url\":\"https://advanceapractice.com/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://advanceapractice.com/#/schema/logo/image/\",\"url\":\"\",\"contentUrl\":\"\",\"width\":1536,\"height\":1024,\"caption\":\"AdvanceAPractice Management Solutions\"},\"image\":{\"@id\":\"https://advanceapractice.com/#/schema/logo/image/\"},\"sameAs\":[\"https://www.facebook.com/groups/1511391026334714\"]},{\"@type\":\"Person\",\"@id\":\"https://advanceapractice.com/#/schema/person/448251395529e7330d89870260918185\",\"name\":\"Ryan\",\"image\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://advanceapractice.com/#/schema/person/image/\",\"url\":\"https://advanceapractice.com/wp-content/litespeed/avatar/059c3d295a08c1a3aba1cdfc88584b78.jpg?ver=1775915170\",\"contentUrl\":\"https://advanceapractice.com/wp-content/litespeed/avatar/059c3d295a08c1a3aba1cdfc88584b78.jpg?ver=1775915170\",\"caption\":\"Ryan\"},\"sameAs\":[\"http://advanceapractice.com\"],\"mainEntityOfPage\":{\"@id\":\"https://advanceapractice.com/author/dev/\"}}]}</script>\n<!-- / Yoast SEO plugin. -->",
+  "yoast_head_json": {
+    "title": "Ryan, Author at AdvanceAPractice",
+    "robots": {
+      "index": "index",
+      "follow": "follow",
+      "max-snippet": "max-snippet:-1",
+      "max-image-preview": "max-image-preview:large",
+      "max-video-preview": "max-video-preview:-1"
+    },
+    "canonical": "https://advanceapractice.com/author/dev/",
+    "og_locale": "en_US",
+    "og_type": "profile",
+    "og_title": "Ryan, Author at AdvanceAPractice",
+    "og_url": "https://advanceapractice.com/author/dev/",
+    "og_site_name": "AdvanceAPractice",
+    "og_image": [
+      {
+        "url": "https://secure.gravatar.com/avatar/623e8c79556b544767ddd56264c2185ce675fe43e4d0eca02eaab56cc7629af7?s=500&d=mm&r=g",
+        "type": "",
+        "width": "",
+        "height": ""
+      }
+    ],
+    "twitter_card": "summary_large_image",
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ProfilePage",
+          "@id": "https://advanceapractice.com/author/dev/",
+          "url": "https://advanceapractice.com/author/dev/",
+          "name": "Ryan, Author at AdvanceAPractice",
+          "isPartOf": {
+            "@id": "https://advanceapractice.com/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://advanceapractice.com/author/dev/#breadcrumb"
+          },
+          "inLanguage": "en-US",
+          "potentialAction": [
+            {
+              "@type": "ReadAction",
+              "target": [
+                "https://advanceapractice.com/author/dev/"
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://advanceapractice.com/author/dev/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://advanceapractice.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Archives for Ryan"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://advanceapractice.com/#website",
+          "url": "https://advanceapractice.com/",
+          "name": "AdvanceAPractice",
+          "description": "National mental health billing, medical billing, credentialing, revenue cycle management, AI clinical documentation, and practice operations services for behavioral health and outpatient practices.",
+          "publisher": {
+            "@id": "https://advanceapractice.com/#organization"
+          },
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://advanceapractice.com/?s={search_term_string}"
+              },
+              "query-input": {
+                "@type": "PropertyValueSpecification",
+                "valueRequired": true,
+                "valueName": "search_term_string"
+              }
+            }
+          ],
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://advanceapractice.com/#organization",
+          "name": "AdvanceAPractice Management Solutions",
+          "url": "https://advanceapractice.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "inLanguage": "en-US",
+            "@id": "https://advanceapractice.com/#/schema/logo/image/",
+            "url": "",
+            "contentUrl": "",
+            "width": 1536,
+            "height": 1024,
+            "caption": "AdvanceAPractice Management Solutions"
+          },
+          "image": {
+            "@id": "https://advanceapractice.com/#/schema/logo/image/"
+          },
+          "sameAs": [
+            "https://www.facebook.com/groups/1511391026334714"
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://advanceapractice.com/#/schema/person/448251395529e7330d89870260918185",
+          "name": "Ryan",
+          "image": {
+            "@type": "ImageObject",
+            "inLanguage": "en-US",
+            "@id": "https://advanceapractice.com/#/schema/person/image/",
+            "url": "https://advanceapractice.com/wp-content/litespeed/avatar/059c3d295a08c1a3aba1cdfc88584b78.jpg?ver=1775915170",
+            "contentUrl": "https://advanceapractice.com/wp-content/litespeed/avatar/059c3d295a08c1a3aba1cdfc88584b78.jpg?ver=1775915170",
+            "caption": "Ryan"
+          },
+          "sameAs": [
+            "http://advanceapractice.com"
+          ],
+          "mainEntityOfPage": {
+            "@id": "https://advanceapractice.com/author/dev/"
+          }
+        }
+      ]
+    }
+  },
+  "elementor_introduction": {
+    "ai-get-started-announcement": true,
+    "globals_introduction": true,
+    "exit_to": true,
+    "ai_get_started": true,
+    "favorites-notice": true,
+    "e-apps": true,
+    "copilot-promotion-opt-in-feedback": true,
+    "yoast-introduction": true,
+    "yoast-introduction-editor-v2": true,
+    "ai_get_started_introduction_site_logo_with_ai_site-settings": true,
+    "upload_json_warning_generic_message": true,
+    "e-ai-upgrade-message": true,
+    "e-editor-one-notice-pointer": true
+  },
+  "_links": {
+    "self": [
+      {
+        "href": "https://advanceapractice.com/wp-json/wp/v2/users/1",
+        "targetHints": {
+          "allow": [
+            "GET",
+            "POST",
+            "PUT",
+            "PATCH",
+            "DELETE"
+          ]
+        }
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://advanceapractice.com/wp-json/wp/v2/users"
+      }
+    ]
+  }
+}
