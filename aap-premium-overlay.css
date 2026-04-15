@@ -1,381 +1,341 @@
 /* ============================================================
-   AAP PREMIUM OVERLAY v1.0
-   Non-destructive enhancement layer for advanceapractice.com.
-   Targets the real aap-* classes injected by aap-hotfix-v1254.
-   Only enhances; does not remove anything.
-   Last updated: 2026-04-15
+   AAP PREMIUM OVERLAY v2.0 — high-specificity rewrite
+   Beats body.aap-hotfix .aap-live-main .section-heading rules.
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap');
 
-/* ── Tokens layered on top of existing palette ───────────── */
 :root {
-    --aapx-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI Variable', 'Segoe UI', system-ui, sans-serif;
+    --aapx-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
     --aapx-font-display: 'Fraunces', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
     --aapx-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
     --aapx-dur: 0.25s;
-    --aapx-dur-slow: 0.55s;
     --aapx-shadow-card: 0 4px 10px rgba(15, 23, 42, 0.06), 0 18px 36px -12px rgba(15, 23, 42, 0.14);
     --aapx-shadow-hover: 0 8px 18px rgba(15, 23, 42, 0.08), 0 32px 56px -14px rgba(15, 23, 42, 0.2);
-    --aapx-shadow-gold: 0 18px 40px rgba(184, 149, 63, 0.28), 0 0 0 1px rgba(201, 169, 97, 0.18);
 }
 
-/* ── Global font swap — Inter everywhere ─────────────────── */
-html, body, .aap-live-shell, .aap-hotfix,
-.aap-live-shell *, .aap-hotfix * {
+/* ── Global font — Inter everywhere. Beats plugin with specificity. ── */
+html body.aap-hotfix,
+html body.aap-hotfix p,
+html body.aap-hotfix li,
+html body.aap-hotfix a,
+html body.aap-hotfix span,
+html body.aap-hotfix div,
+html body.aap-hotfix button,
+html body.aap-hotfix input,
+html body.aap-hotfix textarea,
+html body.aap-hotfix select,
+html body.aap-hotfix .aap-live-main,
+html body.aap-hotfix .aap-live-main *,
+html body.aap-hotfix .aap-live-shell,
+html body.aap-hotfix .aap-live-shell * {
     font-family: var(--aapx-font-sans) !important;
-}
-body, .aap-live-shell {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-feature-settings: "kern", "liga", "calt", "ss01";
-    text-rendering: optimizeLegibility;
 }
 
-/* ── Editorial serif for headlines, quotes, and stats ────── */
-.aap-live-shell h1,
-.aap-live-shell h2,
-.aap-live-shell .aap-home-lead-copy h1,
-.aap-live-shell .aap-hero-shell h1,
-.aap-live-shell .aap-home-lead-kicker + h1,
-.aap-live-shell blockquote,
-.aap-live-shell .aap-quote,
-.aap-live-shell .aap-proof-card .stat-number,
-.aap-live-shell .aap-mini-stat strong,
-.aap-live-shell .aap-home-trust-fact strong {
+/* ── Editorial serif for headlines ── */
+html body.aap-hotfix h1,
+html body.aap-hotfix h2,
+html body.aap-hotfix .aap-live-main h1,
+html body.aap-hotfix .aap-live-main h2,
+html body.aap-hotfix .aap-live-main .section-heading h1,
+html body.aap-hotfix .aap-live-main .section-heading h2,
+html body.aap-hotfix .aap-live-main .hero-copy h1,
+html body.aap-hotfix .aap-home-lead-copy h1,
+html body.aap-hotfix .aap-hero-shell h1,
+html body.aap-hotfix blockquote,
+html body.aap-hotfix .aap-quote,
+html body.aap-hotfix .quote-card blockquote {
     font-family: var(--aapx-font-display) !important;
     font-optical-sizing: auto;
-    font-weight: 600;
-    letter-spacing: -0.025em;
-}
-.aap-live-shell h1,
-.aap-live-shell .aap-hero-shell h1,
-.aap-live-shell .aap-home-lead-copy h1 {
     font-weight: 600 !important;
-    letter-spacing: -0.035em !important;
-    line-height: 1.06 !important;
-}
-.aap-live-shell h2 {
-    font-weight: 600 !important;
-    letter-spacing: -0.022em !important;
-}
-.aap-live-shell h1 em,
-.aap-live-shell h2 em,
-.aap-live-shell .aap-quote em {
-    font-style: italic;
-    font-variation-settings: "SOFT" 50, "WONK" 1;
+    letter-spacing: -0.025em !important;
 }
 
-/* ── Paragraph readability ───────────────────────────────── */
-.aap-live-shell p {
-    max-width: 68ch;
-    line-height: 1.72;
+/* ── H1: more breathing room, less cramped ── */
+html body.aap-hotfix h1,
+html body.aap-hotfix .aap-live-main h1,
+html body.aap-hotfix .aap-live-main .section-heading h1,
+html body.aap-hotfix .aap-live-main .hero-copy h1,
+html body.aap-hotfix .aap-home-lead-copy h1,
+html body.aap-hotfix .aap-hero-shell h1 {
+    font-weight: 600 !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.03em !important;
+    max-width: 20ch !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 1.25rem !important;
 }
-.aap-live-shell .aap-home-lead-copy p,
-.aap-live-shell .aap-hero-shell p,
-.aap-live-shell .aap-kicker + p,
-.aap-live-shell .aap-reference-kicker + p {
-    font-size: clamp(1.05rem, 0.95rem + 0.6vw, 1.22rem);
-    line-height: 1.65;
+
+/* ── H2: tighter tracking, more generous spacing ── */
+html body.aap-hotfix h2,
+html body.aap-hotfix .aap-live-main h2,
+html body.aap-hotfix .aap-live-main .section-heading h2 {
+    font-weight: 600 !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.02em !important;
+    margin-top: 0 !important;
+    margin-bottom: 1rem !important;
+    max-width: 32ch;
+}
+
+/* ── H3 stays Inter but slightly bolder ── */
+html body.aap-hotfix h3,
+html body.aap-hotfix .aap-live-main h3 {
+    font-weight: 700 !important;
+    letter-spacing: -0.01em !important;
+    line-height: 1.3 !important;
+}
+
+/* ── Italic emphasis in display headings ── */
+html body.aap-hotfix h1 em,
+html body.aap-hotfix h2 em,
+html body.aap-hotfix .aap-quote em {
+    font-style: italic;
+    font-variation-settings: "SOFT" 50, "WONK" 1;
+    color: #1648c0;
+}
+
+/* ── Paragraph readability ── */
+html body.aap-hotfix p,
+html body.aap-hotfix .aap-live-main p {
+    max-width: 68ch;
+    line-height: 1.72 !important;
+}
+html body.aap-hotfix .aap-home-lead-copy p,
+html body.aap-hotfix .aap-hero-shell p,
+html body.aap-hotfix .aap-kicker + p {
+    font-size: clamp(1.08rem, 0.95rem + 0.6vw, 1.25rem) !important;
+    line-height: 1.65 !important;
     max-width: 58ch;
 }
 
-/* ── Hero panel premium polish ───────────────────────────── */
-.aap-live-shell .aap-home-lead-panel,
-.aap-live-shell .aap-hero-shell {
+/* ── Hero ambient glow ── */
+html body.aap-hotfix .aap-home-lead-panel,
+html body.aap-hotfix .aap-hero-shell {
     position: relative;
     overflow: hidden;
 }
-.aap-live-shell .aap-home-lead-panel::after,
-.aap-live-shell .aap-hero-shell::after {
+html body.aap-hotfix .aap-home-lead-panel::after,
+html body.aap-hotfix .aap-hero-shell::after {
     content: '';
     position: absolute;
     inset: 0;
     pointer-events: none;
     background:
-        radial-gradient(ellipse 75% 55% at 15% 10%, rgba(56, 189, 248, 0.1), transparent 60%),
-        radial-gradient(ellipse 60% 50% at 90% 95%, rgba(245, 211, 137, 0.09), transparent 60%);
+        radial-gradient(ellipse 75% 55% at 15% 10%, rgba(56, 189, 248, 0.12), transparent 60%),
+        radial-gradient(ellipse 60% 50% at 90% 95%, rgba(245, 211, 137, 0.1), transparent 60%);
     z-index: 0;
 }
-.aap-live-shell .aap-home-lead-shell,
-.aap-live-shell .aap-hero-shell > * {
-    position: relative;
-    z-index: 1;
-}
+html body.aap-hotfix .aap-home-lead-shell,
+html body.aap-hotfix .aap-hero-shell > * { position: relative; z-index: 1; }
 
-/* ── Service / feature cards: deeper hover lift ──────────── */
-.aap-live-shell .aap-service-card,
-.aap-live-shell .aap-proof-card,
-.aap-live-shell .aap-ops-card,
-.aap-live-shell .aap-fit-card,
-.aap-live-shell .aap-growth-path-card,
-.aap-live-shell .aap-resource-card,
-.aap-live-shell .aap-practical-ai-card,
-.aap-live-shell .aap-card,
-.aap-live-shell .aap-form-card,
-.aap-live-shell .aap-side-note-card,
-.aap-live-shell .aap-reference-links > a,
-.aap-live-shell .aap-ref-grid > a {
-    transition: transform var(--aapx-dur) var(--aapx-ease-out),
-                box-shadow var(--aapx-dur) var(--aapx-ease-out),
-                border-color var(--aapx-dur) var(--aapx-ease-out) !important;
+/* ── Service / feature cards: deeper hover lift ── */
+html body.aap-hotfix .aap-service-card,
+html body.aap-hotfix .aap-proof-card,
+html body.aap-hotfix .aap-ops-card,
+html body.aap-hotfix .aap-fit-card,
+html body.aap-hotfix .aap-growth-path-card,
+html body.aap-hotfix .aap-resource-card,
+html body.aap-hotfix .aap-practical-ai-card,
+html body.aap-hotfix .aap-card,
+html body.aap-hotfix .aap-side-note-card {
+    transition: transform 0.25s var(--aapx-ease-out),
+                box-shadow 0.25s var(--aapx-ease-out),
+                border-color 0.25s var(--aapx-ease-out) !important;
     position: relative;
-    box-shadow: var(--aapx-shadow-card);
+    box-shadow: var(--aapx-shadow-card) !important;
 }
-.aap-live-shell .aap-service-card:hover,
-.aap-live-shell .aap-proof-card:hover,
-.aap-live-shell .aap-ops-card:hover,
-.aap-live-shell .aap-fit-card:hover,
-.aap-live-shell .aap-growth-path-card:hover,
-.aap-live-shell .aap-resource-card:hover,
-.aap-live-shell .aap-practical-ai-card:hover,
-.aap-live-shell .aap-card:hover,
-.aap-live-shell .aap-side-note-card:hover,
-.aap-live-shell .aap-reference-links > a:hover,
-.aap-live-shell .aap-ref-grid > a:hover {
+html body.aap-hotfix .aap-service-card:hover,
+html body.aap-hotfix .aap-proof-card:hover,
+html body.aap-hotfix .aap-ops-card:hover,
+html body.aap-hotfix .aap-fit-card:hover,
+html body.aap-hotfix .aap-growth-path-card:hover,
+html body.aap-hotfix .aap-resource-card:hover,
+html body.aap-hotfix .aap-practical-ai-card:hover,
+html body.aap-hotfix .aap-card:hover,
+html body.aap-hotfix .aap-side-note-card:hover {
     transform: translateY(-4px) !important;
     box-shadow: var(--aapx-shadow-hover) !important;
 }
 
 /* Animated gradient underline on card hover */
-.aap-live-shell .aap-service-card::before,
-.aap-live-shell .aap-proof-card::before,
-.aap-live-shell .aap-growth-path-card::before {
+html body.aap-hotfix .aap-service-card::before,
+html body.aap-hotfix .aap-proof-card::before,
+html body.aap-hotfix .aap-growth-path-card::before {
     content: '';
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    left: 0; right: 0; bottom: 0;
     height: 3px;
     background: linear-gradient(90deg, #1a56db 0%, #38bdf8 50%, #f3ca81 100%);
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform var(--aapx-dur-slow) var(--aapx-ease-out);
+    transition: transform 0.55s var(--aapx-ease-out);
     border-radius: inherit;
     pointer-events: none;
 }
-.aap-live-shell .aap-service-card:hover::before,
-.aap-live-shell .aap-proof-card:hover::before,
-.aap-live-shell .aap-growth-path-card:hover::before {
-    transform: scaleX(1);
-}
+html body.aap-hotfix .aap-service-card:hover::before,
+html body.aap-hotfix .aap-proof-card:hover::before,
+html body.aap-hotfix .aap-growth-path-card:hover::before { transform: scaleX(1); }
 
-/* ── Buttons: premium shimmer sweep + deeper shadow ──────── */
-.aap-live-shell .aap-btn,
-.aap-live-shell .aap-global-cta,
-.aap-live-shell .aap-footer-btn,
-.aap-live-shell .aap-home-form-submit,
-.aap-live-shell .aap-growth-path-primary,
-.aap-live-shell .aap-growth-path-secondary,
-.aap-live-shell button[type="submit"],
-.aap-live-shell input[type="submit"] {
+/* ── Buttons: premium shimmer + 48px min height ── */
+html body.aap-hotfix .aap-btn,
+html body.aap-hotfix .aap-global-cta,
+html body.aap-hotfix .aap-footer-btn,
+html body.aap-hotfix .aap-home-form-submit,
+html body.aap-hotfix .aap-growth-path-primary,
+html body.aap-hotfix .aap-growth-path-secondary,
+html body.aap-hotfix button[type="submit"],
+html body.aap-hotfix input[type="submit"] {
     position: relative;
     overflow: hidden;
-    min-height: 48px;
-    letter-spacing: 0.01em;
-    transition: transform var(--aapx-dur) var(--aapx-ease-out),
-                box-shadow var(--aapx-dur) var(--aapx-ease-out),
-                background var(--aapx-dur) ease !important;
+    min-height: 48px !important;
+    letter-spacing: 0.015em !important;
     font-weight: 600 !important;
+    transition: transform 0.25s var(--aapx-ease-out),
+                box-shadow 0.25s var(--aapx-ease-out),
+                background 0.25s ease !important;
 }
-.aap-live-shell .aap-btn::after,
-.aap-live-shell .aap-global-cta::after,
-.aap-live-shell .aap-home-form-submit::after {
+html body.aap-hotfix .aap-btn::after,
+html body.aap-hotfix .aap-global-cta::after,
+html body.aap-hotfix .aap-home-form-submit::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.18) 50%, transparent 70%);
+    background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.22) 50%, transparent 70%);
     transform: translateX(-100%);
     transition: transform 0.7s var(--aapx-ease-out);
     pointer-events: none;
 }
-.aap-live-shell .aap-btn:hover,
-.aap-live-shell .aap-global-cta:hover,
-.aap-live-shell .aap-footer-btn:hover,
-.aap-live-shell .aap-home-form-submit:hover,
-.aap-live-shell .aap-growth-path-primary:hover,
-.aap-live-shell .aap-growth-path-secondary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 20px 40px rgba(26, 86, 219, 0.32), 0 0 0 1px rgba(124, 191, 255, 0.12) !important;
+html body.aap-hotfix .aap-btn:hover,
+html body.aap-hotfix .aap-global-cta:hover,
+html body.aap-hotfix .aap-footer-btn:hover,
+html body.aap-hotfix .aap-home-form-submit:hover,
+html body.aap-hotfix .aap-growth-path-primary:hover,
+html body.aap-hotfix .aap-growth-path-secondary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 20px 40px rgba(26, 86, 219, 0.34), 0 0 0 1px rgba(124, 191, 255, 0.14) !important;
 }
-.aap-live-shell .aap-btn:hover::after,
-.aap-live-shell .aap-global-cta:hover::after,
-.aap-live-shell .aap-home-form-submit:hover::after {
-    transform: translateX(100%);
-}
-.aap-live-shell .aap-btn:active,
-.aap-live-shell .aap-global-cta:active {
-    transform: translateY(0);
-}
+html body.aap-hotfix .aap-btn:hover::after,
+html body.aap-hotfix .aap-global-cta:hover::after,
+html body.aap-hotfix .aap-home-form-submit:hover::after { transform: translateX(100%); }
 
-/* ── Stat/proof cards: gradient gold-blue numerals ──────── */
-.aap-live-shell .aap-proof-card .stat-number,
-.aap-live-shell .aap-proof-card strong,
-.aap-live-shell .aap-mini-stat strong,
-.aap-live-shell .aap-home-trust-fact strong {
-    background: linear-gradient(135deg, #102841 0%, #1d4ed8 60%, #38bdf8 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 700;
-    letter-spacing: -0.03em;
-}
-
-/* ── Quote / testimonial editorial treatment ─────────────── */
-.aap-live-shell .aap-quote,
-.aap-live-shell blockquote,
-.aap-live-shell .aap-testimonial,
-.aap-live-shell .aap-home-trust-lead {
+/* ── Stat numerals: gradient navy-to-blue ── */
+html body.aap-hotfix .aap-proof-card .stat-number,
+html body.aap-hotfix .aap-proof-card strong,
+html body.aap-hotfix .aap-mini-stat strong,
+html body.aap-hotfix .aap-home-trust-fact strong {
+    background: linear-gradient(135deg, #102841 0%, #1d4ed8 60%, #38bdf8 100%) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
     font-family: var(--aapx-font-display) !important;
-    font-style: italic;
-    font-weight: 500;
-    line-height: 1.55;
-    letter-spacing: -0.01em;
+    font-weight: 700 !important;
+    letter-spacing: -0.03em !important;
 }
 
-/* ── Sticky header refinement (already sticky per real CSS) ──── */
-.aap-live-shell .aap-global-header,
-.aap-live-shell .aap-global-header-bar {
-    backdrop-filter: saturate(180%) blur(14px);
-    -webkit-backdrop-filter: saturate(180%) blur(14px);
-}
-.aap-live-shell .aap-global-nav a {
-    transition: color 0.15s ease;
-    letter-spacing: 0.01em;
+/* ── Quote / testimonial editorial treatment ── */
+html body.aap-hotfix .aap-quote,
+html body.aap-hotfix blockquote,
+html body.aap-hotfix .quote-card blockquote,
+html body.aap-hotfix .aap-testimonial,
+html body.aap-hotfix .aap-home-trust-lead {
+    font-family: var(--aapx-font-display) !important;
+    font-style: italic !important;
+    font-weight: 500 !important;
+    line-height: 1.55 !important;
+    letter-spacing: -0.01em !important;
 }
 
-/* ── Form polish: better focus ring, 48px min height ─────── */
-.aap-live-shell input[type="text"],
-.aap-live-shell input[type="email"],
-.aap-live-shell input[type="tel"],
-.aap-live-shell input[type="url"],
-.aap-live-shell textarea,
-.aap-live-shell select {
-    min-height: 48px;
+/* ── HIDE the legacy quote-card testimonials ── */
+html body.aap-hotfix .quote-card,
+html body.aap-hotfix article.quote-card,
+html body.aap-hotfix .testimonial-card {
+    display: none !important;
+}
+
+/* ── Form polish ── */
+html body.aap-hotfix input[type="text"],
+html body.aap-hotfix input[type="email"],
+html body.aap-hotfix input[type="tel"],
+html body.aap-hotfix input[type="url"],
+html body.aap-hotfix textarea,
+html body.aap-hotfix select {
+    min-height: 48px !important;
     transition: border-color 0.15s ease, box-shadow 0.15s ease !important;
 }
-.aap-live-shell input[type="text"]:focus,
-.aap-live-shell input[type="email"]:focus,
-.aap-live-shell input[type="tel"]:focus,
-.aap-live-shell input[type="url"]:focus,
-.aap-live-shell textarea:focus,
-.aap-live-shell select:focus {
+html body.aap-hotfix input:focus,
+html body.aap-hotfix textarea:focus,
+html body.aap-hotfix select:focus {
     outline: none !important;
     box-shadow: 0 0 0 4px rgba(26, 86, 219, 0.18), 0 2px 8px rgba(15, 23, 42, 0.08) !important;
     border-color: #1a56db !important;
 }
-.aap-live-shell textarea { line-height: 1.65; }
 
-/* ── Trust bar: better rhythm, gold accent ───────────────── */
-.aap-live-shell .aap-home-trust-band,
-.aap-live-shell .aap-home-trust-grid {
-    letter-spacing: 0.02em;
-}
-.aap-live-shell .aap-home-trust-kicker {
-    color: #f3ca81 !important;
+/* ── Trust bar gold accent ── */
+html body.aap-hotfix .aap-home-trust-kicker {
+    color: #c9a961 !important;
     letter-spacing: 0.16em !important;
     font-weight: 700 !important;
 }
 
-/* ── Focus-visible ring for a11y ─────────────────────────── */
-.aap-live-shell :focus-visible {
-    outline: 3px solid #38bdf8;
-    outline-offset: 3px;
+/* ── Focus ring for a11y ── */
+html body.aap-hotfix :focus-visible {
+    outline: 3px solid #38bdf8 !important;
+    outline-offset: 3px !important;
     border-radius: 4px;
 }
 
-/* ── Portrait image polish (founder photo) ───────────────── */
-.aap-live-shell img.aap-portrait,
-.aap-live-shell .aap-hero-photo img,
-.aap-live-shell .aap-hero-visual img,
-.aap-live-shell img.is-founder-photo {
-    border-radius: 22px;
-    box-shadow: 0 32px 64px -16px rgba(15, 23, 42, 0.28), 0 12px 24px -8px rgba(15, 23, 42, 0.12);
-    border: 1px solid rgba(201, 169, 97, 0.18);
+/* ── Portrait image polish ── */
+html body.aap-hotfix img.aap-portrait,
+html body.aap-hotfix .aap-hero-photo img,
+html body.aap-hotfix .aap-hero-visual img,
+html body.aap-hotfix img.is-founder-photo {
+    border-radius: 22px !important;
+    box-shadow: 0 32px 64px -16px rgba(15, 23, 42, 0.28), 0 12px 24px -8px rgba(15, 23, 42, 0.12) !important;
+    border: 1px solid rgba(201, 169, 97, 0.22) !important;
 }
 
-/* ── Scroll reveal (subtle, prefers-reduced-motion aware) ─ */
-@media (prefers-reduced-motion: no-preference) {
-    .aap-live-shell .aap-reveal,
-    .aap-live-shell [data-aap-reveal] {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.7s var(--aapx-ease-out), transform 0.7s var(--aapx-ease-out);
-    }
-    .aap-live-shell .aap-reveal.is-visible,
-    .aap-live-shell [data-aap-reveal].is-visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ── Section rhythm / divider refinement ─────────────────── */
-.aap-live-shell .aap-panel,
-.aap-live-shell .aap-panel-inner,
-.aap-live-shell .aap-bottom-panel {
-    position: relative;
-}
-
-/* ── Footer polish ───────────────────────────────────────── */
-.aap-live-shell .aap-live-footer,
-.aap-live-shell .aap-live-footer-shell {
-    position: relative;
-}
-.aap-live-shell .aap-live-footer::before {
+/* ── Footer polish ── */
+html body.aap-hotfix .aap-live-footer,
+html body.aap-hotfix .aap-live-footer-shell { position: relative; }
+html body.aap-hotfix .aap-live-footer::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 0; left: 0; right: 0;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(243, 202, 129, 0.45), transparent);
+    background: linear-gradient(90deg, transparent, rgba(201, 169, 97, 0.5), transparent);
     pointer-events: none;
 }
-.aap-live-shell .aap-live-footer a,
-.aap-live-shell .aap-footer-contact-link,
-.aap-live-shell .aap-live-footer-linkbutton {
-    transition: color 0.15s ease;
+html body.aap-hotfix .aap-live-footer a:hover,
+html body.aap-hotfix .aap-footer-contact-link:hover { color: #c9a961 !important; }
+
+/* ── Social icon hover lift ── */
+html body.aap-hotfix .aap-social-icon,
+html body.aap-hotfix .aap-social-links a,
+html body.aap-hotfix .aap-social-links-footer a {
+    transition: transform 0.25s var(--aapx-ease-out), color 0.15s ease !important;
 }
-.aap-live-shell .aap-live-footer a:hover,
-.aap-live-shell .aap-footer-contact-link:hover {
-    color: #f3ca81 !important;
+html body.aap-hotfix .aap-social-icon:hover,
+html body.aap-hotfix .aap-social-links a:hover,
+html body.aap-hotfix .aap-social-links-footer a:hover {
+    transform: translateY(-2px) !important;
+    color: #c9a961 !important;
 }
 
-/* ── Social icons polish ─────────────────────────────────── */
-.aap-live-shell .aap-social-icon,
-.aap-live-shell .aap-social-links a,
-.aap-live-shell .aap-social-links-footer a,
-.aap-live-shell .aap-social-links-inline a {
-    transition: transform var(--aapx-dur) var(--aapx-ease-out), color 0.15s ease !important;
-}
-.aap-live-shell .aap-social-icon:hover,
-.aap-live-shell .aap-social-links a:hover,
-.aap-live-shell .aap-social-links-footer a:hover {
-    transform: translateY(-2px);
-    color: #f3ca81 !important;
-}
-
-/* ── Tag / pill polish ───────────────────────────────────── */
-.aap-live-shell .aap-tag-row a,
-.aap-live-shell .aap-tag,
-.aap-live-shell .aap-systems-logos > * {
-    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease !important;
-}
-
-/* ── STICKY MOBILE CTA BAR (new component) ───────────────── */
+/* ── Sticky mobile CTA bar ── */
 .aap-mobile-cta-bar {
     display: none;
     position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    left: 0; right: 0; bottom: 0;
     z-index: 998;
     padding: 0.7rem 0.9rem calc(0.7rem + env(safe-area-inset-bottom, 0px));
     gap: 0.55rem;
     background: rgba(12, 22, 39, 0.95);
     backdrop-filter: saturate(180%) blur(12px);
     -webkit-backdrop-filter: saturate(180%) blur(12px);
-    border-top: 1px solid rgba(243, 202, 129, 0.28);
+    border-top: 1px solid rgba(201, 169, 97, 0.3);
     box-shadow: 0 -12px 32px rgba(6, 11, 24, 0.35);
 }
 .aap-mobile-cta-bar a {
@@ -393,82 +353,44 @@ body, .aap-live-shell {
     text-decoration: none !important;
     min-height: 48px;
     border: none;
-    transition: transform var(--aapx-dur) var(--aapx-ease-out), box-shadow var(--aapx-dur) var(--aapx-ease-out);
+    transition: transform 0.25s var(--aapx-ease-out);
 }
 .aap-mobile-cta-bar a.is-primary {
     background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 55%, #38bdf8 100%);
-    color: #ffffff !important;
-    box-shadow: 0 10px 24px rgba(29, 78, 216, 0.4);
+    color: #fff !important;
+    box-shadow: 0 10px 24px rgba(29, 78, 216, 0.42);
 }
 .aap-mobile-cta-bar a.is-gold {
-    background: linear-gradient(135deg, #f3ca81 0%, #ffe3ae 100%);
+    background: linear-gradient(135deg, #c9a961 0%, #ecdcb2 100%);
     color: #102742 !important;
-    box-shadow: 0 10px 24px rgba(184, 149, 63, 0.32);
+    box-shadow: 0 10px 24px rgba(184, 149, 63, 0.34);
 }
-.aap-mobile-cta-bar a:hover,
-.aap-mobile-cta-bar a:active {
-    transform: translateY(-1px);
-}
-
-/* ── Responsive — match existing 767/1100/1220 breakpoints ─ */
-@media (max-width: 1100px) {
-    .aap-live-shell .aap-service-grid,
-    .aap-live-shell .aap-growth-path-grid,
-    .aap-live-shell .aap-ops-grid,
-    .aap-live-shell .aap-ref-grid {
-        gap: 1rem !important;
-    }
-}
+.aap-mobile-cta-bar a:hover { transform: translateY(-1px); }
 
 @media (max-width: 767px) {
-    .aap-live-shell h1,
-    .aap-live-shell .aap-hero-shell h1,
-    .aap-live-shell .aap-home-lead-copy h1 {
-        line-height: 1.1 !important;
-        letter-spacing: -0.025em !important;
+    html body.aap-hotfix h1 {
+        line-height: 1.12 !important;
+        letter-spacing: -0.02em !important;
     }
-    .aap-live-shell h2 {
-        line-height: 1.18 !important;
-    }
-    .aap-live-shell .aap-home-lead-panel,
-    .aap-live-shell .aap-hero-shell {
-        padding-left: 1.25rem !important;
-        padding-right: 1.25rem !important;
-    }
-    .aap-live-shell .aap-btn,
-    .aap-live-shell .aap-global-cta {
-        width: 100%;
-    }
-    /* Reveal sticky mobile CTA on small screens */
+    html body.aap-hotfix h2 { line-height: 1.2 !important; }
     .aap-mobile-cta-bar { display: flex; }
-    body { padding-bottom: 74px !important; }
+    html body.aap-hotfix { padding-bottom: 74px !important; }
 }
 
 @media (max-width: 480px) {
-    .aap-live-shell h1 {
-        font-size: clamp(2rem, 8vw, 2.6rem) !important;
-    }
-    .aap-mobile-cta-bar { padding: 0.6rem 0.7rem calc(0.6rem + env(safe-area-inset-bottom, 0px)); }
+    html body.aap-hotfix h1 { font-size: clamp(2rem, 8vw, 2.6rem) !important; }
     .aap-mobile-cta-bar a { font-size: 0.82rem; padding: 0.75rem 0.5rem; }
 }
 
-/* ── Print ───────────────────────────────────────────────── */
 @media print {
-    .aap-mobile-cta-bar,
-    .aap-global-header,
-    .aap-live-footer { display: none !important; }
+    .aap-mobile-cta-bar { display: none !important; }
 }
 
-/* ── Reduced motion respect (already declared in main CSS) ─ */
 @media (prefers-reduced-motion: reduce) {
-    .aap-live-shell .aap-btn::after,
-    .aap-live-shell .aap-global-cta::after { display: none !important; }
-    .aap-live-shell *,
-    .aap-live-shell *::before,
-    .aap-live-shell *::after {
+    html body.aap-hotfix *,
+    html body.aap-hotfix *::before,
+    html body.aap-hotfix *::after {
         transition-duration: 0.01ms !important;
         animation-duration: 0.01ms !important;
     }
 }
-
-/* ── END — AAP PREMIUM OVERLAY v1.0 ──────────────────────── */
