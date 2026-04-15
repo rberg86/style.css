@@ -153,6 +153,10 @@ FOUNDER_CAP_STR  = pq('Founder-Led Operations')
 FOUNDER_CAP_REPL = pq('Hands-On Operators')
 EMPTY_STR = pq('')
 
+# Replace the old footer business description with a sharper one
+OLD_FOOTER_DESC = pq('Practical execution, sharper visibility, and steadier follow-through for teams that are tired of work getting lost between systems.')
+NEW_FOOTER_DESC = pq('Billing, credentialing, revenue cycle, and practice operations consulting for behavioral health and outpatient teams. We stabilize reimbursement, cut workflow friction, and build systems that actually get used \u2014 without the generic outsourcing theater.')
+
 hook = NL.join([
     '',
     '/* ---- AAP PREMIUM OVERLAY START ---- */',
@@ -183,6 +187,8 @@ hook = NL.join([
     f"        $html = str_ireplace( {FOUNDER_CAP_STR}, {FOUNDER_CAP_REPL}, $html );",
     "        /* Scrub bare 'founder-led' / 'Founder-led' / 'Founder-Led' anywhere */",
     f"        $html = preg_replace( {FOUNDER_LC_REGEX}, {EMPTY_STR}, $html );",
+    "        /* Replace legacy footer business description with the sharper one */",
+    f"        $html = str_replace( {OLD_FOOTER_DESC}, {NEW_FOOTER_DESC}, $html );",
     "        /* Inject overlay stylesheet before </head> if not already present */",
     f"        if ( stripos( $html, 'aap-premium-overlay-global' ) === false ) {{",
     f"            $style_block = {STYLE_OPEN} . {CSS_LITERAL} . {STYLE_CLOSE};",
