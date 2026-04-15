@@ -199,9 +199,21 @@ html body.aap-hotfix[class*="aap-page-"] .aap-live-main .aap-panel-inner {
 }
 
 html body.aap-hotfix .aap-home-lead-shell {
-    width: min(1280px, calc(100% - 32px)) !important;
+    width: min(1440px, calc(100% - 32px)) !important;
+    max-width: none !important;
     padding: clamp(2rem, 3vw, 3.5rem) !important;
     gap: clamp(2rem, 3vw, 3.5rem) !important;
+}
+html body.aap-hotfix .aap-home-trust-band,
+html body.aap-hotfix .aap-reference-shell,
+html body.aap-hotfix .aap-systems-shell,
+html body.aap-hotfix .aap-flow-shell,
+html body.aap-hotfix .aap-growth-path-shell,
+html body.aap-hotfix .aap-global-wrap {
+    width: min(1440px, calc(100% - 32px)) !important;
+    max-width: none !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
 }
 
 /* Stack hero copy / form to full-width below 1200px so the form section
@@ -1393,28 +1405,97 @@ html body.aap-hotfix .aap-ops-card:hover h3 {
     color: var(--aapx-blue) !important;
 }
 
-/* Inline "Learn more →" hint at the bottom of every service/growth card
-   that links somewhere. Uses ::after on the card itself. */
+/* Inline "Learn more →" hint at the bottom of every service/growth card.
+   CRITICAL: include bare .service-card (no aap- prefix) — that's the
+   actual class the plugin uses on the 'Choose the area' cards. */
+html body.aap-hotfix .service-card::after,
+html body.aap-hotfix article.service-card::after,
 html body.aap-hotfix .aap-service-card::after,
 html body.aap-hotfix .aap-growth-path-card::after,
-html body.aap-hotfix .aap-fit-card::after {
-    content: 'Learn more →';
-    display: inline-block;
-    margin-top: 1.1rem;
+html body.aap-hotfix .aap-fit-card::after,
+html body.aap-hotfix .aap-ops-card::after {
+    content: 'Learn more →' !important;
+    display: block !important;
+    margin-top: 1.25rem !important;
     font-family: var(--aapx-font) !important;
-    font-size: 0.82rem;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    color: var(--aapx-blue);
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.02em !important;
+    color: var(--aapx-blue) !important;
     transition: transform var(--aapx-dur) var(--aapx-ease-out),
-                color var(--aapx-dur) var(--aapx-ease-out);
-    pointer-events: none;
+                color var(--aapx-dur) var(--aapx-ease-out) !important;
+    pointer-events: none !important;
 }
+html body.aap-hotfix .service-card:hover::after,
+html body.aap-hotfix article.service-card:hover::after,
 html body.aap-hotfix .aap-service-card:hover::after,
 html body.aap-hotfix .aap-growth-path-card:hover::after,
-html body.aap-hotfix .aap-fit-card:hover::after {
-    transform: translateX(4px);
-    color: var(--aapx-blue-dark);
+html body.aap-hotfix .aap-fit-card:hover::after,
+html body.aap-hotfix .aap-ops-card:hover::after {
+    transform: translateX(5px) !important;
+    color: var(--aapx-blue-dark) !important;
+}
+
+/* Card heading shifts to blue on hover (works for both prefixed and bare) */
+html body.aap-hotfix .service-card h3,
+html body.aap-hotfix article.service-card h3,
+html body.aap-hotfix .service-card strong,
+html body.aap-hotfix article.service-card strong {
+    color: var(--aapx-ink-900) !important;
+    font-family: var(--aapx-font) !important;
+    font-weight: 700 !important;
+    font-size: 1.3rem !important;
+    letter-spacing: -0.018em !important;
+    transition: color var(--aapx-dur) var(--aapx-ease-out) !important;
+    margin-bottom: 0.75rem !important;
+}
+html body.aap-hotfix .service-card:hover h3,
+html body.aap-hotfix .service-card:hover h3 a,
+html body.aap-hotfix .service-card:hover strong,
+html body.aap-hotfix article.service-card:hover h3,
+html body.aap-hotfix article.service-card:hover strong {
+    color: var(--aapx-blue) !important;
+}
+
+/* Bare .service-card card container styling (matches aap-service-card) */
+html body.aap-hotfix .service-card,
+html body.aap-hotfix article.service-card {
+    background: var(--aapx-ink-0) !important;
+    border: 1px solid var(--aapx-ink-200) !important;
+    border-radius: 16px !important;
+    padding: clamp(1.5rem, 2.2vw, 2.25rem) !important;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.03),
+                0 1px 3px rgba(15, 23, 42, 0.04) !important;
+    transition: transform var(--aapx-dur-slow) var(--aapx-ease),
+                box-shadow var(--aapx-dur-slow) var(--aapx-ease),
+                border-color var(--aapx-dur-slow) var(--aapx-ease) !important;
+    cursor: pointer !important;
+    position: relative !important;
+    isolation: isolate;
+}
+html body.aap-hotfix .service-card::before,
+html body.aap-hotfix article.service-card::before {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--aapx-blue) 0%, var(--aapx-blue-400) 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--aapx-dur-slow) var(--aapx-ease);
+    border-radius: 0 0 16px 16px;
+    pointer-events: none;
+}
+html body.aap-hotfix .service-card:hover,
+html body.aap-hotfix article.service-card:hover {
+    transform: translateY(-4px) !important;
+    border-color: var(--aapx-blue-300) !important;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04),
+                0 20px 40px -12px rgba(26, 86, 219, 0.2) !important;
+}
+html body.aap-hotfix .service-card:hover::before,
+html body.aap-hotfix article.service-card:hover::before {
+    transform: scaleX(1);
 }
 
 @media (prefers-reduced-motion: reduce) {
