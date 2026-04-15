@@ -157,6 +157,28 @@ EMPTY_STR = pq('')
 OLD_FOOTER_DESC = pq('Practical execution, sharper visibility, and steadier follow-through for teams that are tired of work getting lost between systems.')
 NEW_FOOTER_DESC = pq('Billing, credentialing, revenue cycle, and practice operations consulting for behavioral health and outpatient teams. We stabilize reimbursement, cut workflow friction, and build systems that actually get used \u2014 without the generic outsourcing theater.')
 
+# Moda recognition HTML block (inserted after hero on home page)
+MODA_HTML = (
+    '<section class="aap-moda-recognition" aria-label="Recognition">'
+    '<div class="aap-moda-inner">'
+    '<div class="aap-moda-copy">'
+    '<span class="aap-moda-tag">Real reimbursement, real payer</span>'
+    '<span class="aap-kicker">Recognition</span>'
+    '<h2>PMHNP practice. Moda Health. Reimbursement landed.</h2>'
+    '<p>This is what follow-through looks like when a claim that other vendors wrote off gets reworked, re-argued, and paid. The kind of result generic outsourcing rarely produces.</p>'
+    '<a class="aap-btn" href="/contact/#aap-contact-form">Talk to us</a>'
+    '</div>'
+    '<figure class="aap-moda-figure">'
+    '<img src="https://advanceapractice.com/wp-content/uploads/2026/04/moda-reimbursement-email-ryan-berg.jpg" '
+    'alt="Moda Health reimbursement confirmation email \u2014 recovered payment for a PMHNP practice served by AdvanceAPractice" '
+    'loading="lazy" width="1968" height="1559" />'
+    '<figcaption>Reimbursement confirmation \u2014 Moda Health, behavioral health practice</figcaption>'
+    '</figure>'
+    '</div>'
+    '</section>'
+)
+MODA_LITERAL = pq(MODA_HTML)
+
 hook = NL.join([
     '',
     '/* ---- AAP PREMIUM OVERLAY START ---- */',
@@ -189,6 +211,19 @@ hook = NL.join([
     f"        $html = preg_replace( {FOUNDER_LC_REGEX}, {EMPTY_STR}, $html );",
     "        /* Replace legacy footer business description with the sharper one */",
     f"        $html = str_replace( {OLD_FOOTER_DESC}, {NEW_FOOTER_DESC}, $html );",
+    "        /* Inject Moda recognition block right after the hero panel on home page */",
+    f"        if ( stripos( $html, 'aap-moda-recognition' ) === false && stripos( $html, 'aap-home-lead-panel' ) !== false ) {{",
+    "            /* Find the closing </section> of the hero panel and inject after it */",
+    f"            $hero_marker = {pq('</section>')};",
+    f"            $hero_pos = stripos( $html, 'aap-home-lead-panel' );",
+    "            if ( $hero_pos !== false ) {",
+    "                $end_pos = stripos( $html, '</section>', $hero_pos );",
+    "                if ( $end_pos !== false ) {",
+    "                    $end_pos = $end_pos + strlen( $hero_marker );",
+    f"                    $html = substr( $html, 0, $end_pos ) . {MODA_LITERAL} . substr( $html, $end_pos );",
+    '                }',
+    '            }',
+    '        }',
     "        /* Inject overlay stylesheet before </head> if not already present */",
     f"        if ( stripos( $html, 'aap-premium-overlay-global' ) === false ) {{",
     f"            $style_block = {STYLE_OPEN} . {CSS_LITERAL} . {STYLE_CLOSE};",
