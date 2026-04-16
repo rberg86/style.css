@@ -527,3 +527,66 @@ footer.wp-block-template-part a:hover { color: #1a56db; }
     .aap-stat-cards { grid-template-columns: 1fr; }
     .aap-trust-bar { flex-direction: column; gap: 0.6rem; text-align: center; }
 }
+
+/* ============================================================
+   v8.6 HOTFIX — restore visibility of EMR landing pages
+   ============================================================
+   Root cause: an injected inline <style> applies
+   `animation: fadeInUp both; animation-play-state: paused;`
+   to `.entry-content > *`. The JS that unpauses on scroll
+   never fires on these pages, so hero sections stay at opacity 0
+   and the pages render blank. Force the animation to complete
+   immediately so the content is always visible.
+   ============================================================ */
+.elementor-widget-container,
+.wp-block-group,
+.entry-content > *,
+.aap-animate,
+.aap-service-hero,
+.hero.aap-service-hero,
+section.hero {
+    animation-play-state: running !important;
+    animation-fill-mode: forwards !important;
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+
+/* Kill the legacy "trust bar" ticker/marquee sitewide (v8.5 intent).
+   Uses html/body specificity to beat `body .aap-trust-bar { display:flex !important }`
+   injected by the premium overlay stylesheet. */
+html body #aap-trust-bar,
+html body .aap-trust-bar,
+html body .aap-ticker,
+html body .aap-ticker-inner,
+html body .aap-ticker-wrap,
+html body .aap-trust-line,
+html body .aap-trust-marquee,
+html body .aap-fact-bar,
+html body .aap-fact-ticker {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Ensure the main site header is always visible on every page
+   (EMR landing pages 18772-18779 had a `display:none` applied via
+   body.page-id-XXXX selectors that hid Neve's header without a
+   replacement ever rendering) */
+html body.page header.header,
+html body.wp-singular header.header,
+html body header.header,
+html body .site-header {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+html body header.header > .wrapper,
+html body header.header .hfg_header,
+html body header.header .header--row.header-main {
+    display: block !important;
+}
+html body header.header .header--row.header-main > .header--row-inner {
+    display: flex !important;
+}
