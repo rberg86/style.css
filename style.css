@@ -747,3 +747,252 @@ html body header.header .header--row.header-main > .header--row-inner {
         margin: 0 !important;
     }
 }
+
+/* ============================================================
+   v8.9 — AUDIT-DRIVEN REWRITE
+   ============================================================
+   The live site is NOT a stock WordPress theme — it uses a
+   custom "aap-global-*" / "aap-live-footer-*" component set.
+   v8.7 and v8.8 targeted wp-block-* selectors that don't exist
+   here, so none of those rules applied. This block replaces
+   them with the real selectors from a live DOM audit.
+   ============================================================ */
+
+/* --- (A) HEADER: stop clipping the title + tagline -------------
+   Root cause: `.aap-global-brand` has max-width:320px + overflow:hidden
+   so "BEHAVIORAL HEALTH + OUTPATIENT PRACTICES NATIONWIDE" was
+   getting cut behind the MENU button on narrow screens. */
+html body .aap-global-brand {
+    overflow: visible !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+    padding-right: 0.75rem;
+}
+html body .aap-global-brand-copy {
+    overflow: visible !important;
+    white-space: normal !important;
+    max-width: none !important;
+    line-height: 1.25 !important;
+}
+html body .aap-global-brand-copy .aap-global-brand-tagline,
+html body .aap-global-brand-copy > small,
+html body .aap-global-brand-copy > span:last-child {
+    font-size: clamp(0.55rem, 2.1vw, 0.72rem) !important;
+    letter-spacing: 0.04em !important;
+    display: block !important;
+}
+html body .aap-global-header-bar {
+    flex-wrap: nowrap !important;
+    gap: 0.75rem !important;
+    align-items: center !important;
+}
+
+@media (max-width: 520px) {
+    /* Drop the tagline below the brand name on very narrow screens
+       so it never has to share horizontal space with MENU. */
+    html body .aap-global-brand img,
+    html body .aap-global-brand .aap-global-brand-logo {
+        width: 36px !important;
+        height: auto !important;
+        flex: 0 0 36px !important;
+    }
+    html body .aap-global-brand-copy {
+        font-size: 0.95rem !important;
+    }
+}
+
+/* --- (B) MOBILE NAV: Current Systems submenu always expanded ---
+   Real selectors from audit:
+     a.aap-mobile-nav-parent  (the clickable parent — was closing menu)
+     div.aap-mobile-nav-submenu  (collapsed container)
+     div.aap-mobile-nav-group   (wrapper)
+   Fix: render the submenu always visible + stop the parent anchor
+   from being the tap target (let the child links be the targets). */
+html body .aap-mobile-nav-panel .aap-mobile-nav-submenu,
+html body .aap-mobile-nav-group .aap-mobile-nav-submenu {
+    display: block !important;
+    max-height: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    overflow: visible !important;
+    height: auto !important;
+    padding: 0.25rem 0 0.5rem 1rem !important;
+    margin: 0 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+}
+html body .aap-mobile-nav-panel .aap-mobile-nav-submenu > a {
+    display: block !important;
+    padding: 0.55rem 0 !important;
+    font-size: 0.95rem !important;
+    opacity: 0.95 !important;
+    pointer-events: auto !important;
+}
+/* The parent link is now a label only — clicking it would close
+   the menu via the nav JS. Disable its pointer events so taps
+   land on the already-expanded child links instead. */
+html body .aap-mobile-nav-panel .aap-mobile-nav-parent {
+    pointer-events: none !important;
+    cursor: default !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+}
+html body .aap-mobile-nav-panel .aap-mobile-nav-parent::after {
+    content: '' !important; /* kill caret — no longer a toggle */
+    display: none !important;
+}
+
+/* --- (C) DUPLICATE PHONE IN FOOTER ON MOBILE -------------------
+   The phone already appears in (1) the mobile menu (.aap-mobile-phone),
+   (2) the sticky mobile CTA (.aap-mobile-cta-bar a.is-gold), and
+   (3) the footer contact column (.aap-footer-phone). That's visibly
+   duplicated on mobile. Hide the footer phone on mobile only — the
+   sticky CTA + mobile menu already expose it. Desktop keeps it. */
+@media (max-width: 768px) {
+    html body footer .aap-footer-phone,
+    html body footer a.aap-footer-phone {
+        display: none !important;
+    }
+}
+
+/* --- (D) SERVICE CARD WITH EMPTY H3 (the "BOLD" card) ----------
+   Root cause: the author shipped an article.service-card whose
+   <h3> has no text, so the paragraph below has no heading weight.
+   Hide the empty h3 and promote the first paragraph visually. */
+html body article.service-card h3:empty,
+html body .service-card h3:empty {
+    display: none !important;
+}
+html body article.service-card h3:empty + p,
+html body .service-card h3:empty + p {
+    font-weight: 700 !important;
+    font-size: 1.05rem !important;
+    color: #0f172a !important;
+    line-height: 1.4 !important;
+}
+
+/* --- (E) RED "A" WORDMARK DEFENSIVE STYLING --------------------
+   Keep `.aap-reda-wrapped` + `.aap-wordmark-red` behaving as plain
+   inline text so no container-width trick can clip the glyph. */
+html body .aap-reda-wrapped,
+html body .aap-wordmark-red {
+    display: inline !important;
+    overflow: visible !important;
+    white-space: normal !important;
+    line-height: inherit !important;
+    font: inherit !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    vertical-align: baseline !important;
+}
+html body .aap-wordmark-red {
+    color: #dc2626 !important;
+    font-weight: inherit !important;
+}
+
+/* --- (F) BLUE / DARK SCENARIO CARDS — READABILITY --------------
+   When a card has a blue or dark background (the "Starting a
+   Practice" / "Growing a Practice" blocks), force light text so
+   body copy isn't unreadable. Targets common custom classnames. */
+html body .aap-scenario-card.is-blue,
+html body .aap-scenario-card[data-variant="blue"],
+html body .scenario-card.is-blue,
+html body .segment-card.is-blue,
+html body .segment-card[style*="background"],
+html body [class*="scenario"][style*="background-color: #1"],
+html body [class*="segment"][style*="background-color: #1"] {
+    color: #f1f5f9 !important;
+}
+html body .aap-scenario-card.is-blue p,
+html body .aap-scenario-card.is-blue h2,
+html body .aap-scenario-card.is-blue h3,
+html body .aap-scenario-card.is-blue h4,
+html body .aap-scenario-card.is-blue a,
+html body .scenario-card.is-blue p,
+html body .scenario-card.is-blue h3,
+html body .scenario-card.is-blue a,
+html body .segment-card.is-blue p,
+html body .segment-card.is-blue h3,
+html body .segment-card.is-blue a {
+    color: #f8fafc !important;
+}
+/* Fallback: any element whose computed background is clearly blue
+   and whose direct children are paragraphs — promote paragraph
+   color to light. Uses attribute selector for brand-blue inline
+   styles the block editor emits. */
+html body [style*="background:#1a56db"] p,
+html body [style*="background-color:#1a56db"] p,
+html body [style*="background: #1a56db"] p,
+html body [style*="background-color: #1a56db"] p,
+html body [style*="background:#1e3a5f"] p,
+html body [style*="background:#0f172a"] p {
+    color: #f1f5f9 !important;
+}
+
+/* --- (G) STAT / AUTHORITY CARD WRAPPER — kill arch/pill shape --
+   The homepage "authority cards" sit inside a wrapper that was
+   painted with a soft-blue rounded background, producing a weird
+   arch behind stacked cards on mobile. Flatten the wrapper bg. */
+html body .aap-authority-cards,
+html body .aap-stat-cards-wrap,
+html body .aap-cards-stack,
+html body .aap-authority-wrap {
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 1rem 0 !important;
+}
+
+/* --- (H) FOOTER LEGAL ROW — clean stacking on mobile ---------- */
+@media (max-width: 768px) {
+    html body .aap-live-footer-bottom {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.5rem !important;
+        padding: 1rem 1rem 5rem !important; /* clearance for sticky CTA */
+        text-align: left !important;
+    }
+    html body .aap-live-footer-bottom > * {
+        margin: 0 !important;
+        width: auto !important;
+    }
+    html body .aap-footer-legal {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 0.5rem 0.75rem !important;
+    }
+    /* Reserve space so the fixed CTA bar stops hiding copyright. */
+    html body.aap-live-shell {
+        padding-bottom: 88px !important;
+    }
+}
+
+/* --- (I) FLOATING WIDGETS — precise positioning on this theme --
+   UserWay / accessibility widget appears with class .uwy + the
+   generic ids from the installed plugin. Keep them above the
+   sticky CTA bar on mobile without stacking over scroll-to-top. */
+@media (max-width: 768px) {
+    html body .uwy.userway_p1,
+    html body .uwy.userway_p3,
+    html body .uwy.userway_p5,
+    html body .uwy,
+    html body #userwayAccessibilityIcon {
+        bottom: 96px !important;
+        right: 12px !important;
+        z-index: 99998 !important;
+    }
+    html body #aap-scroll-top,
+    html body .aap-scroll-top,
+    html body .neve_scroll_to_top,
+    html body .back-to-top {
+        bottom: 160px !important;
+        right: 12px !important;
+        z-index: 99997 !important;
+    }
+    html body .aap-mobile-cta-bar {
+        z-index: 99996 !important;
+    }
+}
